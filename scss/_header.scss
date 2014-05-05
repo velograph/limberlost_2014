@@ -1,0 +1,30 @@
+.contain-to-grid {
+  background: $poppy;
+}
+
+.header {
+  .top_branding {
+    border-bottom: 3px solid $persimmon;
+    img {
+      padding: 1rem 0;
+    }
+  }
+  .top_navigation {
+    background: $mustard;
+    text-align: center;
+    ul {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0;
+      li {
+        display: inline;
+        margin: 0 5rem;
+        a {
+          color: $poppy;
+          font-family: 'bitterBold', Times, serif;
+        }
+      }
+    }
+  }
+}
+

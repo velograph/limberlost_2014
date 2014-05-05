@@ -1,0 +1,33 @@
+/* 1.  Font Families
+================================================== */
+
+/* Bitter Regular */
+@font-face {
+  font-family: 'bitterRegular';
+  src: url('../fonts/bitter-regular.eot');
+  src: url('../fonts/bitter-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/bitter-regular.woff') format('woff'),
+       url('../fonts/bitter-regular.ttf') format('truetype'),
+       url('../fonts/bitter-regular.svg#webfont') format('svg');
+}
+
+/* Bitter Italic */
+@font-face {
+  font-family: 'bitterItalic';
+  src: url('../fonts/bitter-italic.eot');
+  src: url('../fonts/bitter-italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/bitter-italic.woff') format('woff'),
+       url('../fonts/bitter-italic.ttf') format('truetype'),
+       url('../fonts/bitter-italic.svg#webfont') format('svg');
+}
+
+/* Bitter Bold */
+@font-face {
+  font-family: 'bitterBold';
+  src: url('../fonts/bitter-bold.eot');
+  src: url('../fonts/bitter-bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/bitter-bold.woff') format('woff'),
+       url('../fonts/bitter-bold.ttf') format('truetype'),
+       url('../fonts/bitter-bold.svg#webfont') format('svg');
+}
+

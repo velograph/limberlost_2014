@@ -1,0 +1,60 @@
+.container {
+  top: 122px;
+  .home_featured_image {
+    background: $poppy;
+    img {
+      display: block;
+    }
+  }
+  .main_container {
+    background: $baby_blue;
+    position: relative;
+    top: -4px;
+  }
+  .article {
+    margin-bottom: 2rem;
+    position: relative;
+    header {
+      background: rgba(233, 204, 140, .8);
+      bottom: 0;
+      color: #fff;
+      margin: 0;
+      opacity: 0;
+      padding: 0;
+      position: absolute;
+      transition: all .2s linear;
+      h5 {
+        margin: 0;
+        padding: .5rem;
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+  .article:hover header {
+    opacity: 1;
+  }
+}
+
+.who_is_limberlost {
+  .employee_excerpt:nth-child(1) {
+    .entry_content {
+      background: $persimmon;
+    }
+  }
+  .employee_excerpt:nth-child(2) {
+    .entry_content {
+      background: $baby_blue;
+    }
+  }
+  .employee_excerpt:nth-child(3) {
+    .entry_content {
+      background: $mustard;
+    }
+  }
+}
+
+.stay_in_touch {
+  background: url('../img/wood_grain.jpg');
+}

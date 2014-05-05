@@ -2,6 +2,144 @@
  * This is the main stylesheet loaded by default.
  * Edit the file and have fun.
  * http://themefortress.com/reverie */
+/* 1.  Font Families
+================================================== */
+/* Bitter Regular */
+@font-face {
+  font-family: 'bitterRegular';
+  src: url("../fonts/bitter-regular.eot");
+  src: url("../fonts/bitter-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bitter-regular.woff") format("woff"), url("../fonts/bitter-regular.ttf") format("truetype"), url("../fonts/bitter-regular.svg#webfont") format("svg");
+}
+
+/* Bitter Italic */
+@font-face {
+  font-family: 'bitterItalic';
+  src: url("../fonts/bitter-italic.eot");
+  src: url("../fonts/bitter-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/bitter-italic.woff") format("woff"), url("../fonts/bitter-italic.ttf") format("truetype"), url("../fonts/bitter-italic.svg#webfont") format("svg");
+}
+
+/* Bitter Bold */
+@font-face {
+  font-family: 'bitterBold';
+  src: url("../fonts/bitter-bold.eot");
+  src: url("../fonts/bitter-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/bitter-bold.woff") format("woff"), url("../fonts/bitter-bold.ttf") format("truetype"), url("../fonts/bitter-bold.svg#webfont") format("svg");
+}
+
+h1 {
+  font-family: 'bitterBold', Times, serif;
+  text-transform: uppercase;
+}
+
+h5 {
+  line-height: 1rem;
+}
+
+.contain-to-grid {
+  background: #3c4042;
+}
+
+.header .top_branding {
+  border-bottom: 3px solid #f08c69;
+}
+.header .top_branding img {
+  padding: 1rem 0;
+}
+.header .top_navigation {
+  background: #e9cc8c;
+  text-align: center;
+}
+.header .top_navigation ul {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+}
+.header .top_navigation ul li {
+  display: inline;
+  margin: 0 5rem;
+}
+.header .top_navigation ul li a {
+  color: #3c4042;
+  font-family: 'bitterBold', Times, serif;
+}
+
+.container {
+  top: 122px;
+}
+.container .home_featured_image {
+  background: #3c4042;
+}
+.container .home_featured_image img {
+  display: block;
+}
+.container .main_container {
+  background: #d2f0f5;
+  position: relative;
+  top: -4px;
+}
+.container .article {
+  margin-bottom: 2rem;
+  position: relative;
+}
+.container .article header {
+  background: rgba(233, 204, 140, 0.8);
+  bottom: 0;
+  color: #fff;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  transition: all .2s linear;
+}
+.container .article header h5 {
+  margin: 0;
+  padding: .5rem;
+}
+.container .article header h5 a {
+  color: white;
+}
+.container .article:hover header {
+  opacity: 1;
+}
+
+.who_is_limberlost .employee_excerpt:nth-child(1) .entry_content {
+  background: #f08c69;
+}
+.who_is_limberlost .employee_excerpt:nth-child(2) .entry_content {
+  background: #d2f0f5;
+}
+.who_is_limberlost .employee_excerpt:nth-child(3) .entry_content {
+  background: #e9cc8c;
+}
+
+.stay_in_touch {
+  background: url("../img/wood_grain.jpg");
+}
+
+.footer_top {
+  position: relative;
+  top: -4px;
+}
+.footer_top div {
+  height: 10px;
+}
+.footer_top .persimmon_footer {
+  background: #f08c69;
+}
+.footer_top .baby_blue_footer {
+  background: #d2f0f5;
+}
+.footer_top .mustard_footer {
+  background: #e9cc8c;
+}
+
+.footer.full-width {
+  border: 0;
+}
+
+.footer {
+  background-color: #3c4042;
+}
+
 meta.foundation-mq-small {
   font-family: "/only screen and (max-width: 40em)/";
   width: 0em;
@@ -41,11 +179,11 @@ body {
 }
 
 body {
-  background: #f7f7f7;
-  color: #444444;
+  background: white;
+  color: #3c4042;
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "bitterRegular", Times, serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -310,7 +448,7 @@ time a {
 span.author a:hover, span.author a:focus,
 time a:hover,
 time a:focus {
-  color: #444444;
+  color: #3c4042;
 }
 
 .entry-author {
@@ -327,7 +465,7 @@ time a:focus {
   color: #999;
 }
 .entry-author h4 a:hover, .entry-author h4 a:focus {
-  color: #444444;
+  color: #3c4042;
 }
 .entry-author p {
   color: #bbb;
@@ -346,7 +484,7 @@ time a:focus {
   color: #999;
 }
 .entry-tags a:hover, .entry-tags a:focus {
-  color: #444444;
+  color: #3c4042;
 }
 
 .page-numbers {
@@ -477,7 +615,7 @@ ol.commentlist li section.comment a.comment-reply-link {
   color: #bbb;
 }
 ol.commentlist li section.comment a.comment-reply-link:hover, ol.commentlist li section.comment a.comment-reply-link:focus {
-  color: #444444;
+  color: #3c4042;
 }
 
 #sidebar {
@@ -494,7 +632,7 @@ ol.commentlist li section.comment a.comment-reply-link:hover, ol.commentlist li 
   font-size: 0.9375rem;
 }
 #sidebar .panel a:hover, #sidebar .panel a:focus, .footer-widget .panel a:hover, .footer-widget .panel a:focus {
-  color: #444444;
+  color: #3c4042;
 }
 #sidebar ul, .footer-widget ul {
   list-style-type: none;
@@ -510,7 +648,6 @@ ol.commentlist li section.comment a.comment-reply-link:hover, ol.commentlist li 
 }
 
 footer.full-width {
-  background-color: #fff;
   border-top: 1px solid #ccc;
   padding-top: 3rem;
 }
@@ -522,7 +659,7 @@ footer.full-width a {
   font-size: 0.9375rem;
 }
 footer.full-width a:hover, footer.full-width a:focus {
-  color: #444444;
+  color: #3c4042;
 }
 footer.full-width .love-reverie {
   border-top: 1px solid #ccc;

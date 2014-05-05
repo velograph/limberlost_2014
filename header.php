@@ -39,53 +39,56 @@
 
 <body <?php body_class('antialiased'); ?>>
 
-<header class="contain-to-grid">
-	<!-- Starting the Top-Bar -->
-	<nav class="top-bar" data-topbar>
-	    <ul class="title-area">
-	        <li class="name">
-	        	<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	        </li>
-			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	    </ul>
-	    <section class="top-bar-section">
-	    <?php
-	        wp_nav_menu( array(
-	            'theme_location' => 'primary',
-	            'container' => false,
-	            'depth' => 0,
-	            'items_wrap' => '<ul class="left">%3$s</ul>',
-	            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
-	            'walker' => new reverie_walker( array(
-	                'in_top_bar' => true,
-	                'item_type' => 'li',
-	                'menu_type' => 'main-menu'
-	            ) ),
-	        ) );
-	    ?>
-	    <?php
-	    	// Uncomment the following to enable the right menu (additional menu)
-			
-	    	/*
-	        wp_nav_menu( array(
-	            'theme_location' => 'additional',
-	            'container' => false,
-	            'depth' => 0,
-	            'items_wrap' => '<ul class="right">%3$s</ul>',
-	            'walker' => new reverie_walker( array(
-	                'in_top_bar' => true,
-	                'item_type' => 'li',
-	                'menu_type' => 'main-menu'
-	            ) ),
-	        ) );
-	        */
-	    ?>
-	    </section>
-	</nav>
-	<!-- End of Top-Bar -->
+<header class="fixed contain-to-grid header">
+        <div class="top_branding">
+          <div class="row">
+            <div class="small-2 small-centered columns">
+
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                <img src="<?php bloginfo('template_directory'); ?>/img/limberlost_logo.svg" />
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <nav class="small-12 small-centered columns top_navigation">
+
+          <?php
+              wp_nav_menu( array(
+                  'theme_location' => 'primary',
+                  'container' => false,
+                  'depth' => 0,
+                  'items_wrap' => '<ul class="">%3$s</ul>',
+                  'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+              ) );
+          ?>
+
+        </nav>
 </header>
 
 <!-- Start the main container -->
 <div class="container" role="document">
-	<div class="row">
+
+        <div class="full-width">
+          <div class="home_featured_image">
+          <!-- The static featured image we love the most -->
+          <?php echo get_the_post_thumbnail(/* 5 being the home page ID */'5'); ?>
+          </div>
+        </div>
+          
+        <div class="main_container full-width">
+
+          <div class="row">
+
+            <div class="small-12 columns">
+
+              <h2>FOLLOW ALONG</h2>
+              <h4>Recent stories, trip reports, gear reviews, recipes and more from our blog.</h4>
+
+
+            </div>
+          </div>
+
+          <div class="row">
+

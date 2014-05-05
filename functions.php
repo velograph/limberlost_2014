@@ -109,4 +109,9 @@ if ( ! function_exists( 'reverie_entry_meta' ) ) {
         echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';
     }
 };
+
+add_action( 'init', 'add_excerpts_to_pages' );
+function add_excerpts_to_pages() {
+       add_post_type_support( 'page', 'excerpt' );
+}
 ?>

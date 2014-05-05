@@ -1,0 +1,24 @@
+.footer_top {
+  position: relative;
+  top: -4px;
+  div {
+    height: 10px;
+  }
+  .persimmon_footer {
+    background: $persimmon;
+  }
+  .baby_blue_footer {
+    background: $baby_blue;
+  }
+  .mustard_footer {
+    background: $mustard;
+  }
+}
+
+.footer.full-width {
+  border: 0;
+}
+
+.footer {
+  background-color: $poppy;
+}

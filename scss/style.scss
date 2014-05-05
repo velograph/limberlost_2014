@@ -6,8 +6,13 @@
 // import normalize, stay at top
 // @import "normalize";
 
-// Global Foundation Settings
+// Import your changes 
 @import "settings";
+@import "fonts";
+@import "general";
+@import "header";
+@import "main";
+@import "footer";
 
 // Tweak the mixin for WordPress, this might create some extra CSS in additional to app.css
 @import "foundation/components/pagination";
@@ -295,7 +300,6 @@ ol.commentlist {
 
 // Start the footer
 footer.full-width {
-	background-color: #fff;
 	border-top: 1px solid #ccc;
 	padding-top: rem-calc(48);
 	p {
