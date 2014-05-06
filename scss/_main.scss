@@ -1,5 +1,4 @@
 .container {
-  top: 122px;
   .home_featured_image {
     background: $poppy;
     img {
@@ -8,6 +7,7 @@
   }
   .main_container {
     background: $baby_blue;
+    padding-top: 5rem;
     position: relative;
     top: -4px;
   }
@@ -19,17 +19,17 @@
       bottom: 0;
       color: #fff;
       margin: 0;
-      opacity: 0;
       padding: 0;
       position: absolute;
       transition: all .2s linear;
       h5 {
+        color: $white;
         margin: 0;
         padding: .5rem;
-        a {
-          color: $white;
-        }
       }
+    }
+    header:hover h5 {
+      color: $poppy;
     }
   }
   .article:hover header {
@@ -38,6 +38,21 @@
 }
 
 .who_is_limberlost {
+  padding: 5rem;
+  .intro-content {
+    p {
+      font-family: 'bitterItalic', Times, serif;
+      padding-bottom: 5rem;
+      padding-left: 4rem;
+    }
+  }
+  .post-content {
+    padding: 1rem;
+    em {
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+  }
   .employee_excerpt:nth-child(1) {
     .entry_content {
       background: $persimmon;

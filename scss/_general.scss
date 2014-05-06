@@ -1,8 +1,35 @@
-h1 {
-  font-family: 'bitterBold', Times, serif;
-  text-transform: uppercase;
-}
+body {
+  h1 {
+    color: $poppy;
+    font-family: 'bitterBold', Times, serif;
+    font-size: 60px;
+    line-height: 80px;
+    text-transform: uppercase;
+  }
 
-h5 {
-  line-height: 1rem;
+  h2 {
+    color: $poppy;
+    font-family: 'bitterBold', Times, serif;
+    font-size: 36px;
+    line-height: 20px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    color: $poppy;
+    font-family: 'bitterRegular', Times, serif;
+    font-size: 18px;
+  }
+
+  em {
+    color: $poppy;
+    font-family: 'bitterItalic', Times, serif;
+    font-size: 18px;
+  }
+
+  p {
+    font-family: 'bitterRegular', Times, serif;
+    font-size: 16px;
+  }
 }

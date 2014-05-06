@@ -42,7 +42,7 @@
 <header class="fixed contain-to-grid header">
         <div class="top_branding">
           <div class="row">
-            <div class="small-2 small-centered columns">
+            <div class="small-10 medium-2 small-centered columns">
 
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                 <img src="<?php bloginfo('template_directory'); ?>/img/limberlost_logo.svg" />
@@ -70,12 +70,37 @@
 <!-- Start the main container -->
 <div class="container" role="document">
 
+<?php if( is_front_page() ) :?>
         <div class="full-width">
           <div class="home_featured_image">
-          <!-- The static featured image we love the most -->
-          <?php echo get_the_post_thumbnail(/* 5 being the home page ID */'5'); ?>
+            <?php
+
+              $args = array('pagename' => 'home');
+              $query = new WP_Query($args);
+
+              if($query->have_posts()) : 
+                while($query->have_posts()) : 
+                  $query->the_post();
+
+            ?>
+
+          <?php the_post_thumbnail(); ?>
+
+                  
+            <?php
+                endwhile;
+                else: 
+            ?>
+
+                Oops, there are no posts.
+
+            <?php
+                endif;
+              wp_reset_query();
+            ?>
           </div>
         </div>
+<?php endif; ?>
           
         <div class="main_container full-width">
 
@@ -84,7 +109,7 @@
             <div class="small-12 columns">
 
               <h2>FOLLOW ALONG</h2>
-              <h4>Recent stories, trip reports, gear reviews, recipes and more from our blog.</h4>
+              <h3>Recent stories, trip reports, gear reviews, recipes and more from our blog.</h3>
 
 
             </div>

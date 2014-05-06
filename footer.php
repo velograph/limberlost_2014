@@ -4,6 +4,7 @@
 
 </div><!-- Container End -->
 
+<?php if( is_front_page() ) :?>
 <section class="who_is_limberlost">
 
   <!-- Grab the Title and content from 'Who is Limberlost' -->
@@ -19,10 +20,15 @@
   ?>
 
   <div class="row">
-    <div class="small-12 column">
-          <h1><?php the_title() ?></h1>
-          <div class='post-content'><?php the_content() ?></div>      
+
+    <div class="small-12 medium-10 small-centered column">
+
+      <h1><?php the_title() ?></h1>
+
+      <div class='intro-content'><?php the_content() ?></div>      
+
     </div>
+
   </div>
         
   <?php
@@ -54,9 +60,11 @@
     <div class="small-12 medium-4 column employee_excerpt">
       <div class="entry_content">
         <?php the_post_thumbnail(); ?>
-        <h3><?php the_title() ?></h3>
-        <em><?php the_field('employee_title'); ?></em>
-        <div class='post-content'><?php the_excerpt() ?></div>      
+        <div class='post-content'>
+          <h2><?php the_title() ?></h2>
+          <em><?php the_field('employee_title'); ?></em>
+          <?php the_excerpt() ?>
+        </div>
       </div>
     </div>
         
@@ -119,6 +127,7 @@
 
 </section>
 
+<?php endif; ?>
 <div class="show-for-medium-up full-width footer_top">
 
   <div class="medium-4 column persimmon_footer">
