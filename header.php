@@ -39,81 +39,125 @@
 
 <body <?php body_class('antialiased'); ?>>
 
-<header class="fixed contain-to-grid header">
-        <div class="top_branding">
-          <div class="row">
-            <div class="small-10 medium-2 small-centered columns">
+<div class="off-canvas-wrap" data-offcanvas>
 
-              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                <img src="<?php bloginfo('template_directory'); ?>/img/limberlost_logo.svg" />
-              </a>
+  <div class="inner-wrap">
 
-            </div>
-          </div>
+    <aside class="left-off-canvas-menu">
+
+      <div class="row off-canvas-logo">
+
+        <div class="small-8 small-centered columns">
+          <img src="<?php bloginfo('template_directory'); ?>/img/limberlost_logo.svg" />
         </div>
 
-        <nav class="small-12 small-centered columns top_navigation">
+      </div>
 
-          <?php
-              wp_nav_menu( array(
-                  'theme_location' => 'primary',
-                  'container' => false,
-                  'depth' => 0,
-                  'items_wrap' => '<ul class="">%3$s</ul>',
-                  'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
-              ) );
-          ?>
 
-        </nav>
-</header>
+      <?php
+        wp_nav_menu( array(
+          'theme_location' => 'primary',
+          'container' => false,
+          'depth' => 0,
+          'items_wrap' => '<ul class="">%3$s</ul>',
+          'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+        ) );
+      ?>
 
-<!-- Start the main container -->
-<div class="container" role="document">
+      <div class="row off-canvas-monogram">
 
-<?php if( is_front_page() ) :?>
-        <div class="full-width">
-          <div class="home_featured_image">
-            <?php
-
-              $args = array('pagename' => 'home');
-              $query = new WP_Query($args);
-
-              if($query->have_posts()) : 
-                while($query->have_posts()) : 
-                  $query->the_post();
-
-            ?>
-
-          <?php the_post_thumbnail(); ?>
-
-                  
-            <?php
-                endwhile;
-                else: 
-            ?>
-
-                Oops, there are no posts.
-
-            <?php
-                endif;
-              wp_reset_query();
-            ?>
-          </div>
+        <div class="small-4 small-centered columns">
+              <img src="<?php bloginfo('template_directory'); ?>/img/limberlost_monogram.svg" />
         </div>
-<?php endif; ?>
-          
-        <div class="main_container full-width">
 
-          <div class="row">
+      </div>
 
-            <div class="small-12 columns">
+    </aside>
 
-              <h2>FOLLOW ALONG</h2>
-              <h3>Recent stories, trip reports, gear reviews, recipes and more from our blog.</h3>
+    <section class="main-section">
 
+      <header class="fixed contain-to-grid header">
 
+          <div class="top_branding">
+            <div class="row">
+
+              <a class="show-for-small-only left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+
+              <div class="small-8 medium-2 small-centered columns">
+
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                  <img src="<?php bloginfo('template_directory'); ?>/img/limberlost_logo.svg" />
+                </a>
+
+              </div>
             </div>
           </div>
 
-          <div class="row">
+          <nav class="show-for-medium-up medium-12 medium-centered columns top_navigation">
+
+            <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'primary',
+                    'container' => false,
+                    'depth' => 0,
+                    'items_wrap' => '<ul class="">%3$s</ul>',
+                    'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+                ) );
+            ?>
+
+          </nav>
+  </header>
+
+  <!-- Start the main container -->
+  <div class="container" role="document">
+
+  <?php if( is_front_page() ) :?>
+          <div class="full-width">
+            <div class="home_featured_image">
+              <?php
+
+                $args = array('pagename' => 'home');
+                $query = new WP_Query($args);
+
+                if($query->have_posts()) : 
+                  while($query->have_posts()) : 
+                    $query->the_post();
+
+              ?>
+
+            <?php the_post_thumbnail(); ?>
+
+                    
+              <?php
+                  endwhile;
+                  else: 
+              ?>
+
+                  Oops, there are no posts.
+
+              <?php
+                  endif;
+                wp_reset_query();
+              ?>
+            </div>
+          </div>
+  <?php endif; ?>
+            
+          <div class="follow_along main_container full-width">
+
+          <?php if( is_front_page() ) :?>
+
+            <div class="row">
+
+              <div class="small-12 columns">
+
+                <h2>FOLLOW ALONG</h2>
+                <h3>Recent stories, trip reports, gear reviews, recipes and more from our blog.</h3>
+
+
+              </div>
+
+            </div>
+
+          <?php endif; ?>
 

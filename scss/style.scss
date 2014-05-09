@@ -12,6 +12,7 @@
 @import "general";
 @import "header";
 @import "main";
+@import "signup";
 @import "footer";
 
 // Tweak the mixin for WordPress, this might create some extra CSS in additional to app.css
@@ -39,7 +40,6 @@ figure {
 
 // Add class for images
 figure img {
-	@include border-radius(5px);
 }
 
 img.alignright {
@@ -104,11 +104,6 @@ body > header.contain-to-grid {
 	padding-bottom: 0;
 }
 
-#content {
-	background-color: #fff;
-	border: 1px solid #ddd;
-}
-
 .index-card {
 	border-bottom: 1px solid #ddd;
 	padding-bottom: rem-calc(32);
@@ -127,9 +122,6 @@ time {
 		}
 	}
 }
-
-// define content padding for later use
-$content-padding: rem-calc(50);
 
 .entry-author {
 	background-color: #fbfbfb;
@@ -328,42 +320,179 @@ footer.full-width {
 }
 
 @media #{$small-up} {
-  .entry-author {
-          .avatar {
-                  margin-bottom: rem-calc(20);
+  body {
+    h1 {
+      font-size: 1.5rem;
+      letter-spacing: .25rem;
+      line-height: 3.25rem;
+      margin: 0;
+    }
+    h2 {
+      font-size: 1rem;
+      line-height: 3rem;
+      margin: 0;
+    }
+    h3 {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin: 0;
+    }
+    .single_article_header {
+      top: 50px;
+    }
+    .entry-author {
+      .avatar {
+        margin-bottom: rem-calc(20);
+      }
+    }
+    .header.contain-to-grid {
+      margin: 0;
+      padding-bottom: 0;
+      position: relative !important;
+      .top_navigation {
+        ul {
+          li {
+            margin: .5rem 3rem;
           }
-  }
-  .header.contain-to-grid {
-    margin: 0;
-    position: relative !important;
-    .top_navigation {
-      ul {
-        li {
-          margin: .5rem 1.5rem;
+        }
+      }
+      a.menu-icon {
+        // important overrides the styling from Foundation
+        position: absolute;
+      }
+    }
+    .home {
+      .container {
+        .main_container {
+          padding-top: 1rem;
+        }
+        .article {
+          header {
+            opacity: 1;
+          }
         }
       }
     }
+    .who_is_limberlost {
+      padding: 1rem 0;
+      .intro-content {
+        p {
+          font-family: 'bitterItalic', Times, serif;
+          padding-bottom: 1rem;
+          padding-left: .5rem;
+        }
+      }
+      .employee_excerpt {
+        margin-bottom: 1rem;
+      }
+    }
+    .post-categories {
+      li {
+        font-size: .8rem;
+      }
+    }
   }
-  .container {
-    .article {
-      header {
-        opacity: 1;
+  .stay_in_touch {
+    .mc_custom_border_hdr {
+      font-size: 1.5rem;
+      padding: 2rem 1rem 1rem;
+    }
+    #mc_subheader {
+      font-size: .75rem;
+      padding: 0 1rem;
+    }
+    .mc_form_inside {
+      width: 90%;
+    }
+    .social_connect {
+      h2 {
+        font-size: 1rem;
+        margin-top: 0;
+      }
+      li {
+        margin: 0 .5rem;
       }
     }
   }
 }
 
 @media #{$medium-up} {
-  #content {
-          padding: $content-padding;
+  body {
+    h1 {
+      font-size: 3.5rem;
+      line-height: 4rem;
+      margin: 0 0 2rem;
+    }
+    h2 {
+      font-size: 2rem;
+      line-height: 4rem;
+      margin: 0;
+    }
+    h3 {
+      font-size: 1rem;
+      line-height: 2rem;
+      margin: 0 0 .5rem;
+    }
+    .single_article_header {
+      top: 200px;
+    }
+    .header.contain-to-grid {
+      padding-bottom: 0;
+      //position: fixed !important;
+      a.menu-icon {
+        // important overrides the styling from Foundation
+        display: none !important;
+      }
+    }
+    .home {
+      .container {
+        .main_container {
+          padding-top: 5rem;
+        }
+        .article {
+          header {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    .who_is_limberlost {
+      padding: 5rem 0;
+      .intro-content {
+        p {
+          padding-bottom: 1rem;
+          padding-left: 4rem;
+        }
+      }
+      .employee_excerpt {
+        margin-bottom: 5rem;
+      }
+    }
+    .post-categories {
+      li {
+        font-size: .75rem;
+      }
+    }
   }
-  .entry-author {
-          margin: rem-calc(50) (-$content-padding);
-  }
-  .container {
-    .article {
-      header {
-        opacity: 0;
+  .stay_in_touch {
+    .mc_custom_border_hdr {
+      font-size: 3.5rem;
+      padding: 5rem 1rem 1rem;
+    }
+    #mc_subheader {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+    .mc_form_inside {
+      width: 58.395%;
+    }
+    .social_connect {
+      h2 {
+        font-size: 2rem;
+        margin-top: 0;
+      }
+      li {
+        margin: 0 .5rem;
       }
     }
   }

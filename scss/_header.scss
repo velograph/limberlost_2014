@@ -3,6 +3,7 @@
 }
 
 .header {
+  max-width: 100%;
   .top_branding {
     border-bottom: 3px solid $persimmon;
     img {
@@ -19,6 +20,7 @@
       li {
         display: inline-block;
         margin: 0 5rem;
+        text-transform: uppercase;
         a {
           color: $poppy;
           font-family: 'bitterBold', Times, serif;
@@ -28,3 +30,25 @@
   }
 }
 
+.left-off-canvas-menu {
+  border-right: 1px solid $white;
+  text-align: center;
+  .off-canvas-logo {
+    border-bottom: 3px solid $persimmon;
+    margin-bottom: 2rem;
+  }
+  img {
+    padding: 1rem 0;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    li {
+      margin-bottom: 1rem;
+      a {
+        color: $mustard;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

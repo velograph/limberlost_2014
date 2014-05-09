@@ -1,0 +1,25 @@
+.mc_custom_border_hdr {
+    color: $white;
+    font-family: 'bitterBold', Times, serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#mc_subheader {
+    color: $white;
+    font-family: 'bitterItalic', Times, serif;
+    text-align: center;
+}
+
+.mc_form_inside {
+  margin: 0 auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  text-align: center;
+  width: 58.3333%;
+}
+
+#mc-indicates-required,
+#mc_signup_submit {
+  display: none;
+}

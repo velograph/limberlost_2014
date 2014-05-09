@@ -410,22 +410,17 @@ table {
 body h1 {
   color: #3c4042;
   font-family: 'bitterBold', Times, serif;
-  font-size: 60px;
-  line-height: 80px;
   text-transform: uppercase;
 }
 body h2 {
   color: #3c4042;
   font-family: 'bitterBold', Times, serif;
-  font-size: 36px;
   line-height: 20px;
-  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 body h3 {
   color: #3c4042;
   font-family: 'bitterRegular', Times, serif;
-  font-size: 18px;
 }
 body em {
   color: #3c4042;
@@ -434,13 +429,25 @@ body em {
 }
 body p {
   font-family: 'bitterRegular', Times, serif;
-  font-size: 16px;
+  font-size: 18px;
+}
+body figure.figure {
+  display: block;
+}
+body figure.figure figcaption {
+  display: block;
+}
+body #wpstats {
+  display: none;
 }
 
 .contain-to-grid {
   background: #3c4042;
 }
 
+.header {
+  max-width: 100%;
+}
 .header .top_branding {
   border-bottom: 3px solid #f08c69;
 }
@@ -459,10 +466,66 @@ body p {
 .header .top_navigation ul li {
   display: inline-block;
   margin: 0 5rem;
+  text-transform: uppercase;
 }
 .header .top_navigation ul li a {
   color: #3c4042;
   font-family: 'bitterBold', Times, serif;
+}
+
+.left-off-canvas-menu {
+  border-right: 1px solid white;
+  text-align: center;
+}
+.left-off-canvas-menu .off-canvas-logo {
+  border-bottom: 3px solid #f08c69;
+  margin-bottom: 2rem;
+}
+.left-off-canvas-menu img {
+  padding: 1rem 0;
+}
+.left-off-canvas-menu ul {
+  list-style-type: none;
+  margin: 0;
+}
+.left-off-canvas-menu ul li {
+  margin-bottom: 1rem;
+}
+.left-off-canvas-menu ul li a {
+  color: #e9cc8c;
+  text-transform: uppercase;
+}
+
+.home .main_container.follow_along {
+  background: #d2f0f5;
+  padding-bottom: 1rem;
+}
+.home .main_container.follow_along h2 {
+  padding-top: 2rem;
+}
+
+.stay_in_touch {
+  background: url("../img/wood_grain.jpg") no-repeat center top;
+}
+.stay_in_touch .social_connect {
+  padding-bottom: 5rem;
+}
+.stay_in_touch .social_connect h2 {
+  color: white;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.stay_in_touch .social_connect ul {
+  margin: 0;
+  text-align: center;
+}
+.stay_in_touch .social_connect li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+.stay_in_touch .social_connect img {
+  width: 50px;
 }
 
 .container .home_featured_image {
@@ -472,8 +535,7 @@ body p {
   display: block;
 }
 .container .main_container {
-  background: #d2f0f5;
-  padding-top: 5rem;
+  background: white;
   position: relative;
   top: -4px;
 }
@@ -502,13 +564,8 @@ body p {
   opacity: 1;
 }
 
-.who_is_limberlost {
-  padding: 5rem;
-}
 .who_is_limberlost .intro-content p {
   font-family: 'bitterItalic', Times, serif;
-  padding-bottom: 5rem;
-  padding-left: 4rem;
 }
 .who_is_limberlost .post-content {
   padding: 1rem;
@@ -527,8 +584,110 @@ body p {
   background: #e9cc8c;
 }
 
-.stay_in_touch {
-  background: url("../img/wood_grain.jpg");
+.article_archive h1 {
+  padding: 2rem 0;
+}
+.article_archive .article_portal {
+  margin-bottom: 2rem;
+}
+
+.post-categories {
+  list-style-type: none;
+  margin-left: 0;
+}
+.post-categories li {
+  border-radius: 2px;
+  display: inline-block;
+  padding: .25rem .5rem;
+  transition: background .2s linear;
+}
+.post-categories li a {
+  color: #3c4042;
+}
+.post-categories li:hover {
+  background: #f08c69;
+  cursor: pointer;
+}
+
+body.single-post .featured_image_container,
+.page-template-our-story-php .featured_image_container {
+  position: relative;
+}
+body.single-post .featured_image_container .single_article_header,
+.page-template-our-story-php .featured_image_container .single_article_header {
+  position: absolute;
+  text-align: center;
+}
+body.single-post .featured_image_container .single_article_header h1, body.single-post .featured_image_container .single_article_header em,
+.page-template-our-story-php .featured_image_container .single_article_header h1,
+.page-template-our-story-php .featured_image_container .single_article_header em {
+  color: white;
+  text-shadow: 0px 2px 2px #3c4042;
+}
+body.single-post .post-categories,
+.page-template-our-story-php .post-categories {
+  display: inline;
+}
+body.single-post .container .main_container,
+.page-template-our-story-php .container .main_container {
+  background: white;
+  padding-top: 0;
+}
+body.single-post .container .main_container #content,
+.page-template-our-story-php .container .main_container #content {
+  padding-top: 5rem;
+}
+body.single-post .container .main_container #content .entry_meta,
+.page-template-our-story-php .container .main_container #content .entry_meta {
+  text-align: center;
+}
+body.single-post .container .main_container #content h1, body.single-post .container .main_container #content em,
+.page-template-our-story-php .container .main_container #content h1,
+.page-template-our-story-php .container .main_container #content em {
+  color: white;
+}
+body.single-post .container .main_container #content em,
+.page-template-our-story-php .container .main_container #content em {
+  margin-bottom: 1rem;
+}
+body.single-post .our_story_bios h1,
+.page-template-our-story-php .our_story_bios h1 {
+  margin: 2rem 0 3rem;
+}
+
+.pagination {
+  margin-bottom: .5rem;
+  text-align: center;
+}
+.pagination .page-numbers {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.mc_custom_border_hdr {
+  color: white;
+  font-family: 'bitterBold', Times, serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#mc_subheader {
+  color: white;
+  font-family: 'bitterItalic', Times, serif;
+  text-align: center;
+}
+
+.mc_form_inside {
+  margin: 0 auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  text-align: center;
+  width: 58.3333%;
+}
+
+#mc-indicates-required,
+#mc_signup_submit {
+  display: none;
 }
 
 .footer_top {
@@ -550,10 +709,15 @@ body p {
 
 .footer.full-width {
   border: 0;
+  padding-top: 0;
 }
 
 .footer {
   background-color: #3c4042;
+}
+.footer p {
+  color: #e9cc8c;
+  text-align: center;
 }
 
 meta.foundation-mq-small {
@@ -6851,14 +7015,6 @@ figure {
   margin: 0 auto 1.25rem;
 }
 
-figure img {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-}
-
 img.alignright {
   float: right;
   margin: 0 0 18px 18px;
@@ -6915,11 +7071,6 @@ body > header.contain-to-grid {
   margin-bottom: 2rem;
   max-width: 100%;
   padding-bottom: 0;
-}
-
-#content {
-  background-color: #fff;
-  border: 1px solid #ddd;
 }
 
 .index-card {
@@ -7168,33 +7319,141 @@ footer.full-width .love-reverie {
 }
 
 @media only screen {
-  .entry-author .avatar {
+  body h1 {
+    font-size: 1.5rem;
+    letter-spacing: .25rem;
+    line-height: 3.25rem;
+    margin: 0;
+  }
+  body h2 {
+    font-size: 1rem;
+    line-height: 3rem;
+    margin: 0;
+  }
+  body h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0;
+  }
+  body .single_article_header {
+    top: 50px;
+  }
+  body .entry-author .avatar {
     margin-bottom: 1.25rem;
   }
-
-  .header.contain-to-grid {
+  body .header.contain-to-grid {
     margin: 0;
+    padding-bottom: 0;
     position: relative !important;
   }
-  .header.contain-to-grid .top_navigation ul li {
-    margin: .5rem 1.5rem;
+  body .header.contain-to-grid .top_navigation ul li {
+    margin: .5rem 3rem;
+  }
+  body .header.contain-to-grid a.menu-icon {
+    position: absolute;
+  }
+  body .home .container .main_container {
+    padding-top: 1rem;
+  }
+  body .home .container .article header {
+    opacity: 1;
+  }
+  body .who_is_limberlost {
+    padding: 1rem 0;
+  }
+  body .who_is_limberlost .intro-content p {
+    font-family: 'bitterItalic', Times, serif;
+    padding-bottom: 1rem;
+    padding-left: .5rem;
+  }
+  body .who_is_limberlost .employee_excerpt {
+    margin-bottom: 1rem;
+  }
+  body .post-categories li {
+    font-size: .8rem;
   }
 
-  .container .article header {
-    opacity: 1;
+  .stay_in_touch .mc_custom_border_hdr {
+    font-size: 1.5rem;
+    padding: 2rem 1rem 1rem;
+  }
+  .stay_in_touch #mc_subheader {
+    font-size: .75rem;
+    padding: 0 1rem;
+  }
+  .stay_in_touch .mc_form_inside {
+    width: 90%;
+  }
+  .stay_in_touch .social_connect h2 {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+  .stay_in_touch .social_connect li {
+    margin: 0 .5rem;
   }
 }
 @media only screen and (min-width: 40.063em) {
-  #content {
-    padding: 3.125rem;
+  body h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin: 0 0 2rem;
   }
-
-  .entry-author {
-    margin: 3.125rem -3.125rem;
+  body h2 {
+    font-size: 2rem;
+    line-height: 4rem;
+    margin: 0;
   }
-
-  .container .article header {
+  body h3 {
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 0 0 .5rem;
+  }
+  body .single_article_header {
+    top: 200px;
+  }
+  body .header.contain-to-grid {
+    padding-bottom: 0;
+  }
+  body .header.contain-to-grid a.menu-icon {
+    display: none !important;
+  }
+  body .home .container .main_container {
+    padding-top: 5rem;
+  }
+  body .home .container .article header {
     opacity: 0;
+  }
+  body .who_is_limberlost {
+    padding: 5rem 0;
+  }
+  body .who_is_limberlost .intro-content p {
+    padding-bottom: 1rem;
+    padding-left: 4rem;
+  }
+  body .who_is_limberlost .employee_excerpt {
+    margin-bottom: 5rem;
+  }
+  body .post-categories li {
+    font-size: .75rem;
+  }
+
+  .stay_in_touch .mc_custom_border_hdr {
+    font-size: 3.5rem;
+    padding: 5rem 1rem 1rem;
+  }
+  .stay_in_touch #mc_subheader {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .stay_in_touch .mc_form_inside {
+    width: 58.395%;
+  }
+  .stay_in_touch .social_connect h2 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .stay_in_touch .social_connect li {
+    margin: 0 .5rem;
   }
 }
 @media only screen and (min-width: 64.063em) {

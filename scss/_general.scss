@@ -2,24 +2,19 @@ body {
   h1 {
     color: $poppy;
     font-family: 'bitterBold', Times, serif;
-    font-size: 60px;
-    line-height: 80px;
     text-transform: uppercase;
   }
 
   h2 {
     color: $poppy;
     font-family: 'bitterBold', Times, serif;
-    font-size: 36px;
     line-height: 20px;
-    margin-bottom: 1rem;
     text-transform: uppercase;
   }
 
   h3 {
     color: $poppy;
     font-family: 'bitterRegular', Times, serif;
-    font-size: 18px;
   }
 
   em {
@@ -30,6 +25,16 @@ body {
 
   p {
     font-family: 'bitterRegular', Times, serif;
-    font-size: 16px;
+    font-size: 18px;
+  }
+  figure.figure {
+    display: block;
+    figcaption {
+      display: block;
+    }
+  }
+  #wpstats {
+    display: none;
   }
 }
+
