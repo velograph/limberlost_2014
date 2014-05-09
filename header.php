@@ -83,7 +83,7 @@
 
               <a class="show-for-small-only left-off-canvas-toggle menu-icon" href="#"><span></span></a>
 
-              <div class="small-8 medium-2 small-centered columns">
+              <div class="small-6 medium-2 small-centered columns">
 
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                   <img src="<?php bloginfo('template_directory'); ?>/img/limberlost_logo.svg" />
