@@ -366,7 +366,7 @@ footer.full-width {
         .main_container {
           padding-top: 1rem;
         }
-        .article {
+        .follow_along_portal {
           header {
             opacity: 1;
           }
@@ -438,21 +438,20 @@ footer.full-width {
     }
     .header.contain-to-grid {
       padding-bottom: 0;
-      //position: fixed !important;
+      position: fixed !important;
       a.menu-icon {
         // important overrides the styling from Foundation
         display: none !important;
       }
     }
-    .home {
-      .container {
-        .main_container {
-          padding-top: 5rem;
-        }
-        .article {
-          header {
-            opacity: 0;
-          }
+    .container {
+      margin-top: 138px;
+      .main_container {
+        padding-top: 5rem;
+      }
+      .follow_along_portal {
+        header {
+          opacity: 0;
         }
       }
     }
@@ -474,6 +473,11 @@ footer.full-width {
       }
     }
   }
+  .stay_in_touch_large {
+    .mc_form_inside {
+      width: 58.395%;
+    }
+  }
   .stay_in_touch {
     .mc_custom_border_hdr {
       font-size: 3.5rem;
@@ -482,9 +486,6 @@ footer.full-width {
     #mc_subheader {
       font-size: 1rem;
       padding: 0 1rem;
-    }
-    .mc_form_inside {
-      width: 58.395%;
     }
     .social_connect {
       h2 {

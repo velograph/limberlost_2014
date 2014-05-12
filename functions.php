@@ -114,4 +114,9 @@ add_action( 'init', 'add_excerpts_to_pages' );
 function add_excerpts_to_pages() {
        add_post_type_support( 'page', 'excerpt' );
 }
+function cc_mime_types( $mimes ){
+    $mimes['svg'] = 'image/svg+xml';
+      return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
 ?>

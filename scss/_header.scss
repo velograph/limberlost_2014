@@ -30,24 +30,26 @@
   }
 }
 
-.left-off-canvas-menu {
-  border-right: 1px solid $white;
-  text-align: center;
-  .off-canvas-logo {
-    border-bottom: 3px solid $persimmon;
-    margin-bottom: 2rem;
-  }
-  img {
-    padding: 1rem 0;
-  }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    li {
-      margin-bottom: 1rem;
-      a {
-        color: $mustard;
-        text-transform: uppercase;
+.inner-wrap {
+  .left-off-canvas-menu {
+    background: $mustard;
+    border-right: 3px solid $poppy;
+    text-align: center;
+    .off-canvas-logo {
+      margin-bottom: 2rem;
+    }
+    img {
+      padding: 1rem 0;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      li {
+        margin-bottom: 1rem;
+        a {
+          color: $poppy;
+          text-transform: uppercase;
+        }
       }
     }
   }

@@ -473,26 +473,26 @@ body #wpstats {
   font-family: 'bitterBold', Times, serif;
 }
 
-.left-off-canvas-menu {
-  border-right: 1px solid white;
+.inner-wrap .left-off-canvas-menu {
+  background: #e9cc8c;
+  border-right: 3px solid #3c4042;
   text-align: center;
 }
-.left-off-canvas-menu .off-canvas-logo {
-  border-bottom: 3px solid #f08c69;
+.inner-wrap .left-off-canvas-menu .off-canvas-logo {
   margin-bottom: 2rem;
 }
-.left-off-canvas-menu img {
+.inner-wrap .left-off-canvas-menu img {
   padding: 1rem 0;
 }
-.left-off-canvas-menu ul {
+.inner-wrap .left-off-canvas-menu ul {
   list-style-type: none;
   margin: 0;
 }
-.left-off-canvas-menu ul li {
+.inner-wrap .left-off-canvas-menu ul li {
   margin-bottom: 1rem;
 }
-.left-off-canvas-menu ul li a {
-  color: #e9cc8c;
+.inner-wrap .left-off-canvas-menu ul li a {
+  color: #3c4042;
   text-transform: uppercase;
 }
 
@@ -502,30 +502,6 @@ body #wpstats {
 }
 .home .main_container.follow_along h2 {
   padding-top: 2rem;
-}
-
-.stay_in_touch {
-  background: url("../img/wood_grain.jpg") no-repeat center top;
-}
-.stay_in_touch .social_connect {
-  padding-bottom: 5rem;
-}
-.stay_in_touch .social_connect h2 {
-  color: white;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
-  text-align: center;
-}
-.stay_in_touch .social_connect ul {
-  margin: 0;
-  text-align: center;
-}
-.stay_in_touch .social_connect li {
-  display: inline-block;
-  margin: 0 1rem;
-}
-.stay_in_touch .social_connect img {
-  width: 50px;
 }
 
 .container .home_featured_image {
@@ -596,7 +572,6 @@ body #wpstats {
   margin-left: 0;
 }
 .post-categories li {
-  border-radius: 2px;
   display: inline-block;
   padding: .25rem .5rem;
   transition: background .2s linear;
@@ -664,6 +639,44 @@ body.single-post .our_story_bios h1,
   margin: 0 1rem;
 }
 
+#parallax_home {
+  height: 600px;
+  width: 100%;
+  position: relative;
+}
+
+#parallax_home div {
+  position: absolute;
+  text-align: center;
+  top: 300px;
+  width: 100%;
+}
+#parallax_home div img {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.stay_in_touch {
+  background: url("../img/wood_grain.jpg") no-repeat center top;
+}
+.stay_in_touch .social_connect h2 {
+  color: white;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.stay_in_touch .social_connect ul {
+  margin: 0;
+  text-align: center;
+}
+.stay_in_touch .social_connect li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+.stay_in_touch .social_connect img {
+  width: 50px;
+}
+
 .mc_custom_border_hdr {
   color: white;
   font-family: 'bitterBold', Times, serif;
@@ -674,20 +687,58 @@ body.single-post .our_story_bios h1,
 #mc_subheader {
   color: white;
   font-family: 'bitterItalic', Times, serif;
-  text-align: center;
 }
 
-.mc_form_inside {
+.stay_in_touch_small {
+  padding: 2rem 0;
+}
+.stay_in_touch_small #mc_signup_form #mc_subheader {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+.stay_in_touch_small .mc_form_inside {
+  text-align: left;
+}
+.stay_in_touch_small .social_connect {
+  text-align: center;
+}
+.stay_in_touch_small em {
+  color: white;
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: .5rem;
+}
+
+.stay_in_touch_large #mc_subheader {
+  text-align: center;
+}
+.stay_in_touch_large .mc_form_inside {
+  text-align: center;
+}
+.stay_in_touch_large .mc_form_inside {
   margin: 0 auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  text-align: center;
   width: 58.3333%;
 }
+.stay_in_touch_large .mc_form_inside input[type="text"],
+.stay_in_touch_large .mc_form_inside input[type="submit"] {
+  margin-top: 2rem;
+}
+.stay_in_touch_large .social_connect {
+  padding-bottom: 5rem;
+}
 
-#mc-indicates-required,
-#mc_signup_submit {
-  display: none;
+#mc_signup_form .mc_input {
+  border: none;
+  font-family: 'bitterItalic', Times, serif;
+  font-size: 1rem;
+  padding: 0 0 0 1rem;
+}
+#mc_signup_form .mc_signup_submit #mc_signup_submit {
+  background: #f08c69;
+  color: white;
+  padding: .5rem;
 }
 
 .footer_top {
@@ -7355,7 +7406,7 @@ footer.full-width .love-reverie {
   body .home .container .main_container {
     padding-top: 1rem;
   }
-  body .home .container .article header {
+  body .home .container .follow_along_portal header {
     opacity: 1;
   }
   body .who_is_limberlost {
@@ -7413,14 +7464,18 @@ footer.full-width .love-reverie {
   }
   body .header.contain-to-grid {
     padding-bottom: 0;
+    position: fixed !important;
   }
   body .header.contain-to-grid a.menu-icon {
     display: none !important;
   }
-  body .home .container .main_container {
+  body .container {
+    margin-top: 138px;
+  }
+  body .container .main_container {
     padding-top: 5rem;
   }
-  body .home .container .article header {
+  body .container .follow_along_portal header {
     opacity: 0;
   }
   body .who_is_limberlost {
@@ -7437,6 +7492,10 @@ footer.full-width .love-reverie {
     font-size: .75rem;
   }
 
+  .stay_in_touch_large .mc_form_inside {
+    width: 58.395%;
+  }
+
   .stay_in_touch .mc_custom_border_hdr {
     font-size: 3.5rem;
     padding: 5rem 1rem 1rem;
@@ -7444,9 +7503,6 @@ footer.full-width .love-reverie {
   .stay_in_touch #mc_subheader {
     font-size: 1rem;
     padding: 0 1rem;
-  }
-  .stay_in_touch .mc_form_inside {
-    width: 58.395%;
   }
   .stay_in_touch .social_connect h2 {
     font-size: 2rem;

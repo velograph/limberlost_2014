@@ -33,6 +33,9 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/parallax.js"></script>
+
 <?php wp_head(); ?>
 
 </head>
@@ -48,7 +51,7 @@
       <div class="row off-canvas-logo">
 
         <div class="small-8 small-centered columns">
-          <img src="<?php bloginfo('template_directory'); ?>/img/limberlost_logo.svg" />
+          <img src="<?php bloginfo('template_directory'); ?>/img/limberlost_logo_mobile.svg" />
         </div>
 
       </div>
@@ -125,8 +128,17 @@
 
               ?>
 
-            <?php the_post_thumbnail(); ?>
+              <?php
+                $target_post_id = '5';
+                $src = wp_get_attachment_image_src( get_post_thumbnail_id($target_post_id), 'subpage-header', false, '' );
+              ?>
+              <section id="parallax_home" data-speed="10" data-type="background" style="background: url(<?php echo $src[0]; ?> ) repeat 50% top fixed; background-size: cover;">
 
+                <div>
+                  <img src="<?php the_field('image_overlay_script'); ?>" />
+                </div>
+
+              </section>
                     
               <?php
                   endwhile;
@@ -149,11 +161,10 @@
 
             <div class="row">
 
-              <div class="small-12 columns">
+              <div class="small-12 small-centered column">
 
-                <h2>FOLLOW ALONG</h2>
-                <h3>Recent stories, trip reports, gear reviews, recipes and more from our blog.</h3>
-
+                <h1>FOLLOW ALONG</h1>
+                <h3>Recent stories, trip reports, gear reviews, recipes and more from the road.</h3>
 
               </div>
 

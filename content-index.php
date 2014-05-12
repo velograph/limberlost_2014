@@ -8,7 +8,7 @@
 ?>
 
   <div class="small-12 medium-3 columns" role="main">
-    <article id="post-<?php the_ID(); ?>" <?php post_class('article'); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('follow_along_portal article'); ?>>
             <div class="entry-content">
               <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) {the_post_thumbnail('large'); } ?></a>
             </div>

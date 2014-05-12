@@ -1,3 +1,26 @@
+.stay_in_touch {
+  background: url('../img/wood_grain.jpg') no-repeat center top;
+  .social_connect {
+    h2 {
+      color: $white;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    ul {
+      margin: 0;
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+    img {
+      width: 50px;
+    }
+  }
+}
+
 .mc_custom_border_hdr {
     color: $white;
     font-family: 'bitterBold', Times, serif;
@@ -8,18 +31,64 @@
 #mc_subheader {
     color: $white;
     font-family: 'bitterItalic', Times, serif;
+}
+
+.stay_in_touch_small {
+  padding: 2rem 0;
+  #mc_signup_form {
+    #mc_subheader {
+      font-size: 20px;
+      margin-bottom: 1rem;
+    }
+  }
+  .mc_form_inside {
+    text-align: left;
+  }
+  .social_connect {
     text-align: center;
+  }
+  em {
+    color: $white;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: .5rem;
+  }
 }
 
-.mc_form_inside {
-  margin: 0 auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  text-align: center;
-  width: 58.3333%;
+.stay_in_touch_large {
+  #mc_subheader {
+    text-align: center;
+  }
+  .mc_form_inside {
+    text-align: center;
+  }
+  .mc_form_inside {
+    margin: 0 auto;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 58.3333%;
+    input[type="text"],
+    input[type="submit"] {
+      margin-top: 2rem;
+    }
+  }
+  .social_connect {
+    padding-bottom: 5rem;
+  }
 }
 
-#mc-indicates-required,
-#mc_signup_submit {
-  display: none;
+#mc_signup_form {
+  .mc_input {
+    border: none;
+    font-family: 'bitterItalic', Times, serif;
+    font-size: 1rem;
+    padding: 0 0 0 1rem;
+  }
+  .mc_signup_submit {
+    #mc_signup_submit {
+      background: $persimmon;
+      color: $white;
+      padding: .5rem;
+    }
+  }
 }

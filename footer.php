@@ -4,137 +4,105 @@
       </div><!-- Container End -->
 
       <?php if( is_front_page() ) :?>
-      <section class="who_is_limberlost">
+        <section class="who_is_limberlost">
 
-        <!-- Grab the Title and content from 'Who is Limberlost' -->
-        <?php
+          <!-- Grab the Title and content from 'Who is Limberlost' -->
+          <?php
 
-          $args = array('page_id' => 15);
-          $query = new WP_Query($args);
+            $args = array('page_id' => 15);
+            $query = new WP_Query($args);
 
-          if($query->have_posts()) : 
-            while($query->have_posts()) : 
-              $query->the_post();
+            if($query->have_posts()) : 
+              while($query->have_posts()) : 
+                $query->the_post();
 
-        ?>
+          ?>
 
-        <div class="row">
+          <div class="row">
 
-          <div class="small-12 medium-10 small-centered column">
+            <div class="small-12 medium-10 small-centered column">
 
-            <h1><?php the_title() ?></h1>
+              <h1><?php the_title() ?></h1>
 
-            <div class='intro-content'><?php the_content() ?></div>      
+              <div class='intro-content'><?php the_content() ?></div>      
+
+            </div>
 
           </div>
+                
+          <?php
+              endwhile;
+              else: 
+          ?>
 
-        </div>
-              
-        <?php
-            endwhile;
-            else: 
-        ?>
+              Oops, there are no posts.
 
-            Oops, there are no posts.
+          <?php
+              endif;
+            wp_reset_query();
+          ?>
 
-        <?php
-            endif;
-          wp_reset_query();
-        ?>
+          <!-- Grab the names, titles, and excerpts from people -->
+          <?php
 
-        <!-- Grab the names, titles, and excerpts from people -->
-        <?php
+            $args = array('post_type' => 'page', 'post_parent' => 15, 'order' => 'ASC', 'orderby' => 'menu_order');
+            $query = new WP_Query($args);
 
-          $args = array('post_type' => 'page', 'post_parent' => 15, 'order' => 'ASC', 'orderby' => 'menu_order');
-          $query = new WP_Query($args);
+            if($query->have_posts()) : 
+          ?>
+          <div class="row">
+          <?php
+              while($query->have_posts()) : 
+                $query->the_post();
 
-          if($query->have_posts()) : 
-        ?>
-        <div class="row">
-        <?php
-            while($query->have_posts()) : 
-              $query->the_post();
-
-        ?>
-          <div class="small-12 medium-4 column employee_excerpt">
-            <div class="entry_content">
-              <?php the_post_thumbnail(); ?>
-              <div class='post-content'>
-                <h2><?php the_title() ?></h2>
-                <em><?php the_field('employee_title'); ?></em>
-                <?php the_excerpt() ?>
+          ?>
+            <div class="small-12 medium-4 column employee_excerpt">
+              <div class="entry_content">
+                <?php the_post_thumbnail(); ?>
+                <div class='post-content'>
+                  <h2><?php the_title() ?></h2>
+                  <em><?php the_field('employee_title'); ?></em>
+                  <?php the_excerpt() ?>
+                </div>
               </div>
             </div>
+                
+          <?php
+              endwhile;
+          ?>
           </div>
-              
-        <?php
-            endwhile;
-        ?>
-        </div>
-        <?php
-            else: 
-        ?>
+          <?php
+              else: 
+          ?>
 
-            Oops, there are no posts.
+              Oops, there are no posts.
 
-        <?php
-            endif;
-          wp_reset_query();
-        ?>
+          <?php
+              endif;
+            wp_reset_query();
+          ?>
 
-      </section>
+        </section>
 
       <?php endif; ?>
 
-      <section class="stay_in_touch">
+      <?php if( is_front_page() ) : ?>
 
-        <div class="mailing_signup">
+        <section class="stay_in_touch_large stay_in_touch">
 
-          <?php get_template_part('content', 'mailing'); ?>
+            <?php get_template_part('content', 'mailing_home'); ?>
 
-        </div>
+        </section>
 
-        <div class="social_connect">
+      <?php else : ?>
 
-          <div class="row">
-            <h2 class="small-12 small-centered columns">OR FIND US ELSEWHERE ON THE WEB:</h2>
-          </div>
+        <section class="stay_in_touch_small stay_in_touch">
 
-          <div class="row">
+            <?php get_template_part('content', 'mailing_small'); ?>
 
-            <div class="small-12 small-centered columns">
+        </section>
 
-              <ul>
-                <li>
-                  <a href="<?php the_field('facebook', 6); ?>" target="_blank">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" />
-                  </a>
-                </li>
-
-                <li>
-                  <a href="<?php the_field('instagram', 6); ?>" target="_blank">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg" />
-                  </a>
-                </li>
-
-                <li>
-                  <a href="<?php the_field('tumblr', 6); ?>" target="_blank">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/tumblr.svg" />
-                  </a>
-                </li>
-
-                <li>
-                  <a href="<?php the_field('twitter', 6); ?>" target="_blank">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/twitter.svg" />
-                  </a>
-                </li>
-              </ul>
-
-            </div>
-
-          </div>
-
-      </section>
+      <?php endif; ?>
 
       <div class="show-for-medium-up full-width footer_top">
 
