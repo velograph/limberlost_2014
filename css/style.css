@@ -639,19 +639,27 @@ body.single-post .our_story_bios h1,
   margin: 0 1rem;
 }
 
-#parallax_home {
+#parallax {
   height: 600px;
   width: 100%;
   position: relative;
 }
+#parallax .single_header {
+  margin: 0 auto;
+  position: relative;
+  width: 80%;
+}
+#parallax .single_header h1, #parallax .single_header em {
+  color: white;
+}
 
-#parallax_home div {
+#parallax div {
   position: absolute;
   text-align: center;
-  top: 300px;
+  top: 200px;
   width: 100%;
 }
-#parallax_home div img {
+#parallax div img {
   margin: 0 auto;
   width: 80%;
 }

@@ -152,16 +152,24 @@ body.single-post,
   }
 }
 
-#parallax_home { 
+#parallax { 
   height: 600px; 
   width: 100%; 
   position: relative; 
+  .single_header {
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+    h1, em {
+      color: $white;
+    }
+  }
 }
 
-#parallax_home div { 
+#parallax div { 
   position: absolute; 
   text-align: center; 
-  top: 300px; 
+  top: 200px; 
   width: 100%; 
   img {
     margin: 0 auto;

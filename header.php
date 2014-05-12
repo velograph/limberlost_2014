@@ -132,7 +132,7 @@
                 $target_post_id = '5';
                 $src = wp_get_attachment_image_src( get_post_thumbnail_id($target_post_id), 'subpage-header', false, '' );
               ?>
-              <section id="parallax_home" data-speed="10" data-type="background" style="background: url(<?php echo $src[0]; ?> ) repeat 50% top fixed; background-size: cover;">
+              <section id="parallax" data-speed="10" data-type="background" style="background: url(<?php echo $src[0]; ?> ) repeat 50% top fixed; background-size: cover;">
 
                 <div>
                   <img src="<?php the_field('image_overlay_script'); ?>" />

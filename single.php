@@ -10,16 +10,18 @@
 
           <div class="featured_image_container">
 
-            <div class="row">
-              <header class="single_article_header">
-                <div class="small-12 small-centered column entry_meta">
+              <?php
+                $target_post_id = $post->ID;
+                $src = wp_get_attachment_image_src( get_post_thumbnail_id($target_post_id), 'subpage-header', false, '' );
+              ?>
+              <section id="parallax" data-speed="10" data-type="background" style="background: url(<?php echo $src[0]; ?> ) repeat 50% top fixed; background-size: cover;">
+
+                <div class="single_header">
                   <em><?php the_date(); ?></em>
                   <h1 class="entry-title"><?php the_title(); ?></h1>
                 </div>
-              </header>
-            </div>
 
-            <?php the_post_thumbnail(); ?>
+              </section>
 
           </div>
 
