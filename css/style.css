@@ -614,10 +614,6 @@ body.single-post .container .main_container,
   background: white;
   padding-top: 0;
 }
-body.single-post .container .main_container #content,
-.page-template-our-story-php .container .main_container #content {
-  padding-top: 5rem;
-}
 body.single-post .container .main_container #content .entry_meta,
 .page-template-our-story-php .container .main_container #content .entry_meta {
   text-align: center;
@@ -7499,6 +7495,9 @@ footer.full-width .love-reverie {
   body .container .container .main_container {
     padding-top: 1rem;
   }
+  body .container .container .main_container #content {
+    padding-top: 1rem;
+  }
   body .container .container .follow_along_portal header {
     opacity: 1;
   }
@@ -7572,13 +7571,23 @@ footer.full-width .love-reverie {
     height: 600px;
     top: 20px;
   }
+  body .container #parallax .single_header {
+    top: 200px;
+  }
+  body .container #parallax .single_header em {
+    font-size: .8rem;
+  }
+  body .container #parallax .single_header h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
   body .container .home_featured_image #parallax {
     height: 600px;
   }
   body .container .home_featured_image #parallax div {
     top: 200px;
   }
-  body .container .main_container {
+  body .container .main_container #content {
     padding-top: 5rem;
   }
   body .container .follow_along_portal header {
