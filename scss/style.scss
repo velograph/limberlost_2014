@@ -346,9 +346,13 @@ footer.full-width {
       }
     }
     .header.contain-to-grid {
+      height: 65px;
       margin: 0;
       padding-bottom: 0;
-      position: relative !important;
+      position: fixed !important;
+      .top_branding {
+        background: $poppy;
+      }
       .top_navigation {
         ul {
           li {
@@ -361,7 +365,33 @@ footer.full-width {
         position: absolute;
       }
     }
-    .home {
+    .container {
+      top: 65px;
+      #parallax {
+        background-attachment: scroll !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        height: 300px;
+        top: 65px;
+        .single_header {
+          top: 75px;
+          em {
+            font-size: .8rem;
+          }
+          h1 {
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
+        }
+      }
+      .home_featured_image {
+        #parallax {
+          height: 215px;
+          div {
+            top: 75px;
+          }
+        }
+      }
       .container {
         .main_container {
           padding-top: 1rem;
@@ -425,7 +455,6 @@ footer.full-width {
     }
     h2 {
       font-size: 2rem;
-      line-height: 4rem;
       margin: 0;
     }
     h3 {
@@ -437,6 +466,7 @@ footer.full-width {
       top: 200px;
     }
     .header.contain-to-grid {
+      height: 115px;
       padding-bottom: 0;
       position: fixed !important;
       a.menu-icon {
@@ -445,7 +475,22 @@ footer.full-width {
       }
     }
     .container {
-      margin-top: 138px;
+      #parallax {
+        background-attachment: fixed !important;
+        background-repeat: repeat !important;
+        background-size: cover !important;
+        height: 600px;
+        top: 20px;
+      }
+      .home_featured_image {
+        #parallax {
+          height: 600px;
+          div {
+            top: 200px;
+          }
+        }
+      }
+      margin-top: 115px;
       .main_container {
         padding-top: 5rem;
       }

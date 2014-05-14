@@ -82,6 +82,12 @@
   }
   .article_portal {
     margin-bottom: 2rem;
+    a {
+      color: $persimmon;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -153,7 +159,6 @@ body.single-post,
 }
 
 #parallax { 
-  height: 600px; 
   width: 100%; 
   position: relative; 
   .single_header {
@@ -177,3 +182,30 @@ body.single-post,
   }
 }
 
+.page-template-join-us-php {
+  .container {
+    background: $mustard;
+  }
+}
+
+.join_us {
+  margin-bottom: 2rem;
+}
+
+.trip_teasers {
+  .oakridge-weekender {
+    background: $baby_blue;
+  }
+  .oregon-outback {
+    background: $persimmon;
+  }
+  .three-sisters-three-rivers {
+    background: $mustard;
+  }
+  .attachment-featured_image {
+    margin-bottom: 1rem;
+  }
+  h2 {
+    margin-top: 2rem;
+  }
+}

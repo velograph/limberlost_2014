@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width" />
 
 	<!-- Favicon and Feed -->
-	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 
 	<!--  iPhone Web App Home Screen Icon -->
@@ -86,7 +86,7 @@
 
               <a class="show-for-small-only left-off-canvas-toggle menu-icon" href="#"><span></span></a>
 
-              <div class="small-6 medium-2 small-centered columns">
+              <div class="small-4 medium-2 small-centered columns">
 
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                   <img src="<?php bloginfo('template_directory'); ?>/img/limberlost_logo.svg" />
@@ -153,8 +153,50 @@
               ?>
             </div>
           </div>
-  <?php endif; ?>
             
+
+          <section class="who_is_limberlost">
+
+              <!-- Grab the Title and content from 'Who is Limberlost' -->
+              <?php
+
+                $args = array('page_id' => 15);
+                $query = new WP_Query($args);
+
+                if($query->have_posts()) : 
+                  while($query->have_posts()) : 
+                    $query->the_post();
+
+              ?>
+
+              <div class="row">
+
+                <div class="small-12 medium-10 small-centered column">
+
+                  <h1><?php the_title() ?></h1>
+
+                  <div class='intro-content'><?php the_content() ?></div>      
+
+                </div>
+
+              </div>
+                    
+              <?php
+                  endwhile;
+                  else: 
+              ?>
+
+                  Oops, there are no posts.
+
+              <?php
+                  endif;
+                wp_reset_query();
+              ?>
+
+            </section>
+
+
+      <?php endif; ?>
           <div class="follow_along main_container full-width">
 
           <?php if( is_front_page() ) :?>

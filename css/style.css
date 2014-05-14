@@ -566,6 +566,12 @@ body #wpstats {
 .article_archive .article_portal {
   margin-bottom: 2rem;
 }
+.article_archive .article_portal a {
+  color: #f08c69;
+}
+.article_archive .article_portal a:hover {
+  text-decoration: underline;
+}
 
 .post-categories {
   list-style-type: none;
@@ -640,7 +646,6 @@ body.single-post .our_story_bios h1,
 }
 
 #parallax {
-  height: 600px;
   width: 100%;
   position: relative;
 }
@@ -662,6 +667,30 @@ body.single-post .our_story_bios h1,
 #parallax div img {
   margin: 0 auto;
   width: 80%;
+}
+
+.page-template-join-us-php .container {
+  background: #e9cc8c;
+}
+
+.join_us {
+  margin-bottom: 2rem;
+}
+
+.trip_teasers .oakridge-weekender {
+  background: #d2f0f5;
+}
+.trip_teasers .oregon-outback {
+  background: #f08c69;
+}
+.trip_teasers .three-sisters-three-rivers {
+  background: #e9cc8c;
+}
+.trip_teasers .attachment-featured_image {
+  margin-bottom: 1rem;
+}
+.trip_teasers h2 {
+  margin-top: 2rem;
 }
 
 .stay_in_touch {
@@ -773,10 +802,36 @@ body.single-post .our_story_bios h1,
 
 .footer {
   background-color: #3c4042;
-}
-.footer p {
   color: #e9cc8c;
   text-align: center;
+}
+.footer .sponsor_logos {
+  border-bottom: 1px solid #999;
+}
+.footer .sponsor_logos img {
+  padding: 1rem;
+}
+.footer ul {
+  list-style-type: none;
+  margin: 1rem 0 0 0;
+}
+.footer ul ul {
+  margin: 0;
+}
+.footer ul li {
+  margin-bottom: .5rem;
+}
+.footer ul li a {
+  color: #d2f0f5;
+}
+.footer ul li a:hover {
+  color: white;
+}
+.footer ul li .copyright {
+  font-size: .65rem;
+}
+.footer ul li .site_credit {
+  font-size: .55rem;
 }
 
 meta.foundation-mq-small {
@@ -7401,9 +7456,13 @@ footer.full-width .love-reverie {
     margin-bottom: 1.25rem;
   }
   body .header.contain-to-grid {
+    height: 65px;
     margin: 0;
     padding-bottom: 0;
-    position: relative !important;
+    position: fixed !important;
+  }
+  body .header.contain-to-grid .top_branding {
+    background: #3c4042;
   }
   body .header.contain-to-grid .top_navigation ul li {
     margin: .5rem 3rem;
@@ -7411,10 +7470,36 @@ footer.full-width .love-reverie {
   body .header.contain-to-grid a.menu-icon {
     position: absolute;
   }
-  body .home .container .main_container {
+  body .container {
+    top: 65px;
+  }
+  body .container #parallax {
+    background-attachment: scroll !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    height: 300px;
+    top: 65px;
+  }
+  body .container #parallax .single_header {
+    top: 75px;
+  }
+  body .container #parallax .single_header em {
+    font-size: .8rem;
+  }
+  body .container #parallax .single_header h1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  body .container .home_featured_image #parallax {
+    height: 215px;
+  }
+  body .container .home_featured_image #parallax div {
+    top: 75px;
+  }
+  body .container .container .main_container {
     padding-top: 1rem;
   }
-  body .home .container .follow_along_portal header {
+  body .container .container .follow_along_portal header {
     opacity: 1;
   }
   body .who_is_limberlost {
@@ -7459,7 +7544,6 @@ footer.full-width .love-reverie {
   }
   body h2 {
     font-size: 2rem;
-    line-height: 4rem;
     margin: 0;
   }
   body h3 {
@@ -7471,6 +7555,7 @@ footer.full-width .love-reverie {
     top: 200px;
   }
   body .header.contain-to-grid {
+    height: 115px;
     padding-bottom: 0;
     position: fixed !important;
   }
@@ -7478,7 +7563,20 @@ footer.full-width .love-reverie {
     display: none !important;
   }
   body .container {
-    margin-top: 138px;
+    margin-top: 115px;
+  }
+  body .container #parallax {
+    background-attachment: fixed !important;
+    background-repeat: repeat !important;
+    background-size: cover !important;
+    height: 600px;
+    top: 20px;
+  }
+  body .container .home_featured_image #parallax {
+    height: 600px;
+  }
+  body .container .home_featured_image #parallax div {
+    top: 200px;
   }
   body .container .main_container {
     padding-top: 5rem;

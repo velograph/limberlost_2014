@@ -3,45 +3,9 @@
 
       </div><!-- Container End -->
 
-      <?php if( is_front_page() ) :?>
-        <section class="who_is_limberlost">
+      <?php if( is_front_page() ) : ?>
 
-          <!-- Grab the Title and content from 'Who is Limberlost' -->
-          <?php
-
-            $args = array('page_id' => 15);
-            $query = new WP_Query($args);
-
-            if($query->have_posts()) : 
-              while($query->have_posts()) : 
-                $query->the_post();
-
-          ?>
-
-          <div class="row">
-
-            <div class="small-12 medium-10 small-centered column">
-
-              <h1><?php the_title() ?></h1>
-
-              <div class='intro-content'><?php the_content() ?></div>      
-
-            </div>
-
-          </div>
-                
-          <?php
-              endwhile;
-              else: 
-          ?>
-
-              Oops, there are no posts.
-
-          <?php
-              endif;
-            wp_reset_query();
-          ?>
-
+          <section class="employee_bios">
           <!-- Grab the names, titles, and excerpts from people -->
           <?php
 
@@ -51,6 +15,8 @@
             if($query->have_posts()) : 
           ?>
           <div class="row">
+
+          <h1 class="small-12 medium-11 columns">We've Got This</h1>
           <?php
               while($query->have_posts()) : 
                 $query->the_post();
@@ -128,11 +94,70 @@
 
       <footer class="full-width footer" role="contentinfo">
 
+        <div class="row sponsor_logos">
+
+          <div class="small-12 medium-offset-2 medium-2 columns">
+
+            <a href="http://doubledarn.com" target="_blank">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/double_darn_logo.svg" />
+            </a>
+
+          </div>
+
+          <div class="small-12 medium-2 columns">
+
+            <a href="http://velodirt.com" target="_blank">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/velodirt_logo.svg" />
+            </a>
+
+          </div>
+
+          <div class="small-12 medium-2 columns">
+
+            <a href="http://www.ruckuscomp.com/" target="_blank">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/ruckus_logo.svg" />
+            </a>
+
+          </div>
+
+          <div class="small-12 medium-2 left columns">
+
+            <a href="http://sellwoodcycle.com" target="_blank">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/sellwood_logo.svg" />
+            </a>
+
+          </div>
+
+        </div>
+
         <div class="row">
 
-          <div class="small-12 small-centered columns">
+          <div class="small-12 medium-offset-4 medium-4 columns">
 
-            <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Sally forth!</p>
+            <ul>
+              <li>
+                <a href='m&#97;ilt&#111;&#58;h%65&#108;&#37;6C%6F&#64;l%&#54;&#57;mb&#101;&#114;&#37;6C%&#54;F&#37;73t&#46;&#37;&#54;3%6&#70;'>&#104;ello&#64;limberlos&#116;&#46;co</a>
+              </li>
+              <?php
+                  wp_nav_menu( array(
+                      'theme_location' => 'primary',
+                      'container' => false,
+                      'depth' => 0,
+                      'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+                  ) );
+              ?>
+              <li>
+                <span class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></span>
+              </li>
+
+<!--
+Hold off on this for a bit
+              <li>
+                <a href="http://velograph.net" target="_blank" class="site_credit">Site by Velograph</a>
+              </li>
+-->
+
+            </ul>
 
           </div>
 
