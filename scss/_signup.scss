@@ -33,6 +33,14 @@
     font-family: 'bitterItalic', Times, serif;
 }
 
+.mailing_small {
+  #mc_signup {
+    em {
+      padding-left: 0.9375rem;
+    }
+  }
+}
+
 .stay_in_touch_small {
   padding: 2rem 0;
   #mc_signup_form {
@@ -69,7 +77,7 @@
     width: 58.3333%;
     input[type="text"],
     input[type="submit"] {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
   }
   .social_connect {
@@ -87,8 +95,10 @@
   .mc_signup_submit {
     #mc_signup_submit {
       background: $persimmon;
-      color: $white;
+      color: $poppy;
+      font-family: 'bitterBold', Times, serif;
       padding: .5rem;
+      text-transform: uppercase;
     }
   }
 }

@@ -1,6 +1,6 @@
 <div class="row">
 
-<div class="mailing_signup small-12 medium-8 columns">
+<div class="small-12 medium-8 columns mailing_small mailing_signup ">
 
   <div id="mc_signup">
 
@@ -10,17 +10,17 @@
       <input type="hidden" value="mc_submit_signup_form" name="mcsf_action">
       <input type="hidden" value="fd56407bd2" name="_mc_submit_signup_form_nonce" id="_mc_submit_signup_form_nonce">		
 
-      <div id="mc_subheader">
+      <em>
         Sign up for occasional email updates:
-      </div><!-- /mc_subheader -->
+      </em><!-- /mc_subheader -->
 
       <div class="mc_form_inside">
 
-        <div class="small-10 columns mc_merge_var">
+        <div class="small-12 medium-9 columns mc_merge_var">
           <input type="text" class="mc_input" id="mc_mv_EMAIL" name="mc_mv_EMAIL" placeholder="Enter your email here." size="18">
         </div><!-- /mc_merge_var -->
 
-        <div class="small-2 columns mc_signup_submit">
+        <div class="small-12 medium-3 columns mc_signup_submit">
           <input type="submit" class="button" value="Subscribe" id="mc_signup_submit" name="mc_signup_submit">
         </div><!-- /mc_signup_submit -->
 

@@ -10,7 +10,6 @@
 
 .container {
   .home_featured_image {
-    background: $poppy;
     img {
       display: block;
     }
@@ -20,6 +19,9 @@
     position: relative;
     top: -4px;
   }
+}
+
+.follow_along {
   .article {
     margin-bottom: 2rem;
     position: relative;
@@ -59,17 +61,17 @@
       margin-bottom: 1rem;
     }
   }
-  .employee_excerpt:nth-child(1) {
+  .gabriel-amadeus {
     .entry_content {
       background: $persimmon;
     }
   }
-  .employee_excerpt:nth-child(2) {
+  .jason-britton {
     .entry_content {
       background: $baby_blue;
     }
   }
-  .employee_excerpt:nth-child(3) {
+  .ryan-kelley {
     .entry_content {
       background: $mustard;
     }
@@ -77,9 +79,6 @@
 }
 
 .article_archive {
-  h1 {
-    padding: 2rem 0;
-  }
   .article_portal {
     margin-bottom: 2rem;
     a {
@@ -105,6 +104,10 @@
   li:hover {
     background: $persimmon;
     cursor: pointer;
+    a {
+      color: $poppy;
+      text-decoration: none;
+    }
   }
 }
 
@@ -164,8 +167,11 @@ body.single-post,
     margin: 0 auto;
     position: relative;
     width: 80%;
-    h1, em {
+    h1, em, a {
       color: $white;
+    }
+    a:hover {
+      color: $persimmon;
     }
   }
 }
@@ -192,6 +198,10 @@ body.single-post,
 }
 
 .trip_teasers {
+  margin-bottom: 3rem;
+  .trip {
+    padding-bottom: 2rem;
+  }
   .oakridge-weekender {
     background: $baby_blue;
   }
@@ -203,8 +213,27 @@ body.single-post,
   }
   .attachment-featured_image {
     margin-bottom: 1rem;
+    margin-top: 2rem;
   }
   h2 {
     margin-top: 2rem;
+  }
+}
+
+#allowed_tags {
+  color: #666;
+  code {
+    color: #999;
+  }
+}
+
+#commentform {
+  #submit {
+    background: $persimmon;
+    border-radius: 0;
+    color: $poppy;
+    font-family: 'bitterBold', Times, serif;
+    padding: .5rem;
+    text-transform: uppercase;
   }
 }

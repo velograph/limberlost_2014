@@ -59,9 +59,13 @@ get_header(); ?>
   ?>
 <?php global $post;
 $post_slug = $post->post_name; ?>
-    <div class="<?php echo $post_slug; ?>">
+    <div class="<?php echo $post_slug; ?> trip">
       <div class="entry_content">
-        <?php the_post_thumbnail('featured_image'); ?>
+        <div class="row">
+          <div class="small-12 columns">
+          <?php the_post_thumbnail('featured_image'); ?>
+          </div>
+        </div>
         <div class='row post-content'>
           <?php the_content() ?>
         </div>

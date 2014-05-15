@@ -5,6 +5,7 @@
 
       <?php if( is_front_page() ) : ?>
 
+      <div class="who_is_limberlost">
           <section class="employee_bios">
           <!-- Grab the names, titles, and excerpts from people -->
           <?php
@@ -22,7 +23,9 @@
                 $query->the_post();
 
           ?>
-            <div class="small-12 medium-4 column employee_excerpt">
+            <?php global $post;
+            $post_slug = $post->post_name; ?>
+            <div class="<?php echo $post_slug; ?> small-12 medium-4 column employee_excerpt">
               <div class="entry_content">
                 <?php the_post_thumbnail(); ?>
                 <div class='post-content'>
@@ -49,6 +52,7 @@
           ?>
 
         </section>
+</div>
 
       <?php endif; ?>
 
@@ -70,21 +74,21 @@
 
       <?php endif; ?>
 
-      <div class="show-for-medium-up full-width footer_top">
+      <div class="full-width footer_top">
 
-        <div class="medium-4 column persimmon_footer">
-
-          &nbsp;
-
-        </div>
-
-        <div class="medium-4 column baby_blue_footer">
+        <div class="small-12 medium-4 column persimmon_footer">
 
           &nbsp;
 
         </div>
 
-        <div class="medium-4 column mustard_footer">
+        <div class="small-12 medium-4 column baby_blue_footer">
+
+          &nbsp;
+
+        </div>
+
+        <div class="small-12 medium-4 column mustard_footer">
 
           &nbsp;
 

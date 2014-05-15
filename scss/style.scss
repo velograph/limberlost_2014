@@ -324,12 +324,12 @@ footer.full-width {
     h1 {
       font-size: 1.5rem;
       letter-spacing: .25rem;
-      line-height: 3.25rem;
+      line-height: 2.25rem;
       margin: 0;
     }
     h2 {
       font-size: 1rem;
-      line-height: 3rem;
+      line-height: 2rem;
       margin: 0;
     }
     h3 {
@@ -340,6 +340,11 @@ footer.full-width {
     .single_article_header {
       top: 50px;
     }
+    .article_archive {
+      h1 {
+        padding-top: 2rem;
+      }
+    }
     .entry-author {
       .avatar {
         margin-bottom: rem-calc(20);
@@ -349,7 +354,7 @@ footer.full-width {
       height: 65px;
       margin: 0;
       padding-bottom: 0;
-      position: fixed !important;
+      position: relative !important;
       .top_branding {
         background: $poppy;
       }
@@ -367,12 +372,8 @@ footer.full-width {
     }
     .container {
       top: 65px;
-      #parallax {
-        background-attachment: scroll !important;
-        background-repeat: no-repeat !important;
-        background-size: contain !important;
-        height: 300px;
-        top: 65px;
+      #static_home_banner {
+        position: relative;
         .single_header {
           top: 75px;
           em {
@@ -385,10 +386,11 @@ footer.full-width {
         }
       }
       .home_featured_image {
-        #parallax {
-          height: 215px;
-          div {
-            top: 75px;
+        #static_home_banner {
+          position: relative;
+          img.overlay_script {
+            position: absolute;
+            top: 65px;
           }
         }
       }
@@ -432,7 +434,14 @@ footer.full-width {
     }
     #mc_subheader {
       font-size: .75rem;
+      line-height: 1.5rem;
       padding: 0 1rem;
+    }
+    #mc_signup_submit {
+      margin: 1.5rem 0;
+    }
+    .mc_input {
+      margin: 0;
     }
     .mc_form_inside {
       width: 90%;
@@ -444,6 +453,13 @@ footer.full-width {
       }
       li {
         margin: 0 .5rem;
+      }
+    }
+  }
+  .footer {
+    .sponsor_logos {
+      img {
+        padding: 4rem;
       }
     }
   }
@@ -509,11 +525,17 @@ footer.full-width {
           padding-top: 5rem;
         }
       }
-      .follow_along_portal {
-        header {
-          opacity: 0;
-        }
+    }
+    .follow_along {
+      padding-top: 5rem;
+    }
+    .follow_along_portal {
+      header {
+        opacity: 0 !important;
       }
+    }
+    .article:hover header {
+      opacity: 1 !important;
     }
     .who_is_limberlost {
       padding: 5rem 0;
@@ -545,7 +567,11 @@ footer.full-width {
     }
     #mc_subheader {
       font-size: 1rem;
+      line-height: 1.5rem;
       padding: 0 1rem;
+    }
+    .mc_input {
+      margin: 0;
     }
     .social_connect {
       h2 {
@@ -554,6 +580,13 @@ footer.full-width {
       }
       li {
         margin: 0 .5rem;
+      }
+    }
+  }
+  .footer {
+    .sponsor_logos {
+      img {
+        padding: 1rem;
       }
     }
   }

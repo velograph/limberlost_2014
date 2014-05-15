@@ -7,7 +7,9 @@ get_header(); ?>
 <section class="article_archive">
 
   <div class="row">
-    <h1 class="small-12 columns">Follow Along on some of our most recent Adventures</h1>
+    <div class="small-12 columns">
+      <h1>Follow Along on some of our most recent Adventures</h1>
+    </div>
   </div>
 
 <?php

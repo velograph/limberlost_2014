@@ -132,13 +132,22 @@
                 $target_post_id = '5';
                 $src = wp_get_attachment_image_src( get_post_thumbnail_id($target_post_id), 'subpage-header', false, '' );
               ?>
-              <section id="parallax" data-speed="10" data-type="background" style="background: url(<?php echo $src[0]; ?> ) repeat 50% top fixed; background-size: cover;">
+              <div id="static_home_banner" class="show-for-medium-down">
+                <?php the_post_thumbnail(); ?>
+                <img class="overlay_script" src="<?php the_field('image_overlay_script'); ?>" />
+              </div>
 
-                <div>
-                  <img src="<?php the_field('image_overlay_script'); ?>" />
-                </div>
+              </div>
+              <!-- Show parallax for large screens -->
+              <div class="show-for-large-up">
+                <section id="parallax" data-speed="10" data-type="background" style="background: url(<?php echo $src[0]; ?> ) repeat 50% top fixed; background-size: cover;">
 
-              </section>
+                  <div>
+                    <img src="<?php the_field('image_overlay_script'); ?>" />
+                  </div>
+
+                </section>
+              </div>
                     
               <?php
                   endwhile;
@@ -171,7 +180,7 @@
 
               <div class="row">
 
-                <div class="small-12 medium-10 small-centered column">
+                <div class="small-12 small-centered column">
 
                   <h1><?php the_title() ?></h1>
 
@@ -206,7 +215,7 @@
               <div class="small-12 small-centered column">
 
                 <h1>FOLLOW ALONG</h1>
-                <h3>Recent stories, trip reports, gear reviews, recipes and more from the road.</h3>
+                <h3>Recent stories, trip reports, gear reviews, recipes and more from the road less traveled.</h3>
 
               </div>
 

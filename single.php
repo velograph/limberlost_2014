@@ -17,7 +17,7 @@
               <section id="parallax" data-speed="10" data-type="background" style="background: url(<?php echo $src[0]; ?> ) repeat 50% top fixed; background-size: cover;">
 
                 <div class="single_header">
-                  <em><?php the_date(); ?></em>
+                  <em><?php the_date(); ?>/ Posted by <?php the_author_posts_link(); ?></em>
                   <h1 class="entry-title"><?php the_title(); ?></h1>
                 </div>
 

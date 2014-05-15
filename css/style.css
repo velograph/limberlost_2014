@@ -504,9 +504,6 @@ body #wpstats {
   padding-top: 2rem;
 }
 
-.container .home_featured_image {
-  background: #3c4042;
-}
 .container .home_featured_image img {
   display: block;
 }
@@ -515,11 +512,12 @@ body #wpstats {
   position: relative;
   top: -4px;
 }
-.container .article {
+
+.follow_along .article {
   margin-bottom: 2rem;
   position: relative;
 }
-.container .article header {
+.follow_along .article header {
   background: rgba(233, 204, 140, 0.8);
   bottom: 0;
   color: #fff;
@@ -528,15 +526,15 @@ body #wpstats {
   position: absolute;
   transition: all .2s linear;
 }
-.container .article header h5 {
+.follow_along .article header h5 {
   color: white;
   margin: 0;
   padding: .5rem;
 }
-.container .article header:hover h5 {
+.follow_along .article header:hover h5 {
   color: #3c4042;
 }
-.container .article:hover header {
+.follow_along .article:hover header {
   opacity: 1;
 }
 
@@ -550,19 +548,16 @@ body #wpstats {
   display: inline-block;
   margin-bottom: 1rem;
 }
-.who_is_limberlost .employee_excerpt:nth-child(1) .entry_content {
+.who_is_limberlost .gabriel-amadeus .entry_content {
   background: #f08c69;
 }
-.who_is_limberlost .employee_excerpt:nth-child(2) .entry_content {
+.who_is_limberlost .jason-britton .entry_content {
   background: #d2f0f5;
 }
-.who_is_limberlost .employee_excerpt:nth-child(3) .entry_content {
+.who_is_limberlost .ryan-kelley .entry_content {
   background: #e9cc8c;
 }
 
-.article_archive h1 {
-  padding: 2rem 0;
-}
 .article_archive .article_portal {
   margin-bottom: 2rem;
 }
@@ -588,6 +583,10 @@ body #wpstats {
 .post-categories li:hover {
   background: #f08c69;
   cursor: pointer;
+}
+.post-categories li:hover a {
+  color: #3c4042;
+  text-decoration: none;
 }
 
 body.single-post .featured_image_container,
@@ -650,8 +649,11 @@ body.single-post .our_story_bios h1,
   position: relative;
   width: 80%;
 }
-#parallax .single_header h1, #parallax .single_header em {
+#parallax .single_header h1, #parallax .single_header em, #parallax .single_header a {
   color: white;
+}
+#parallax .single_header a:hover {
+  color: #f08c69;
 }
 
 #parallax div {
@@ -673,6 +675,12 @@ body.single-post .our_story_bios h1,
   margin-bottom: 2rem;
 }
 
+.trip_teasers {
+  margin-bottom: 3rem;
+}
+.trip_teasers .trip {
+  padding-bottom: 2rem;
+}
 .trip_teasers .oakridge-weekender {
   background: #d2f0f5;
 }
@@ -684,9 +692,26 @@ body.single-post .our_story_bios h1,
 }
 .trip_teasers .attachment-featured_image {
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 .trip_teasers h2 {
   margin-top: 2rem;
+}
+
+#allowed_tags {
+  color: #666;
+}
+#allowed_tags code {
+  color: #999;
+}
+
+#commentform #submit {
+  background: #f08c69;
+  border-radius: 0;
+  color: #3c4042;
+  font-family: 'bitterBold', Times, serif;
+  padding: .5rem;
+  text-transform: uppercase;
 }
 
 .stay_in_touch {
@@ -720,6 +745,10 @@ body.single-post .our_story_bios h1,
 #mc_subheader {
   color: white;
   font-family: 'bitterItalic', Times, serif;
+}
+
+.mailing_small #mc_signup em {
+  padding-left: 0.9375rem;
 }
 
 .stay_in_touch_small {
@@ -756,7 +785,7 @@ body.single-post .our_story_bios h1,
 }
 .stay_in_touch_large .mc_form_inside input[type="text"],
 .stay_in_touch_large .mc_form_inside input[type="submit"] {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .stay_in_touch_large .social_connect {
   padding-bottom: 5rem;
@@ -770,8 +799,10 @@ body.single-post .our_story_bios h1,
 }
 #mc_signup_form .mc_signup_submit #mc_signup_submit {
   background: #f08c69;
-  color: white;
+  color: #3c4042;
+  font-family: 'bitterBold', Times, serif;
   padding: .5rem;
+  text-transform: uppercase;
 }
 
 .footer_top {
@@ -803,9 +834,6 @@ body.single-post .our_story_bios h1,
 }
 .footer .sponsor_logos {
   border-bottom: 1px solid #999;
-}
-.footer .sponsor_logos img {
-  padding: 1rem;
 }
 .footer ul {
   list-style-type: none;
@@ -7432,12 +7460,12 @@ footer.full-width .love-reverie {
   body h1 {
     font-size: 1.5rem;
     letter-spacing: .25rem;
-    line-height: 3.25rem;
+    line-height: 2.25rem;
     margin: 0;
   }
   body h2 {
     font-size: 1rem;
-    line-height: 3rem;
+    line-height: 2rem;
     margin: 0;
   }
   body h3 {
@@ -7448,6 +7476,9 @@ footer.full-width .love-reverie {
   body .single_article_header {
     top: 50px;
   }
+  body .article_archive h1 {
+    padding-top: 2rem;
+  }
   body .entry-author .avatar {
     margin-bottom: 1.25rem;
   }
@@ -7455,7 +7486,7 @@ footer.full-width .love-reverie {
     height: 65px;
     margin: 0;
     padding-bottom: 0;
-    position: fixed !important;
+    position: relative !important;
   }
   body .header.contain-to-grid .top_branding {
     background: #3c4042;
@@ -7469,28 +7500,25 @@ footer.full-width .love-reverie {
   body .container {
     top: 65px;
   }
-  body .container #parallax {
-    background-attachment: scroll !important;
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-    height: 300px;
-    top: 65px;
+  body .container #static_home_banner {
+    position: relative;
   }
-  body .container #parallax .single_header {
+  body .container #static_home_banner .single_header {
     top: 75px;
   }
-  body .container #parallax .single_header em {
+  body .container #static_home_banner .single_header em {
     font-size: .8rem;
   }
-  body .container #parallax .single_header h1 {
+  body .container #static_home_banner .single_header h1 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  body .container .home_featured_image #parallax {
-    height: 215px;
+  body .container .home_featured_image #static_home_banner {
+    position: relative;
   }
-  body .container .home_featured_image #parallax div {
-    top: 75px;
+  body .container .home_featured_image #static_home_banner img.overlay_script {
+    position: absolute;
+    top: 65px;
   }
   body .container .container .main_container {
     padding-top: 1rem;
@@ -7522,7 +7550,14 @@ footer.full-width .love-reverie {
   }
   .stay_in_touch #mc_subheader {
     font-size: .75rem;
+    line-height: 1.5rem;
     padding: 0 1rem;
+  }
+  .stay_in_touch #mc_signup_submit {
+    margin: 1.5rem 0;
+  }
+  .stay_in_touch .mc_input {
+    margin: 0;
   }
   .stay_in_touch .mc_form_inside {
     width: 90%;
@@ -7533,6 +7568,10 @@ footer.full-width .love-reverie {
   }
   .stay_in_touch .social_connect li {
     margin: 0 .5rem;
+  }
+
+  .footer .sponsor_logos img {
+    padding: 4rem;
   }
 }
 @media only screen and (min-width: 40.063em) {
@@ -7590,8 +7629,14 @@ footer.full-width .love-reverie {
   body .container .main_container #content {
     padding-top: 5rem;
   }
-  body .container .follow_along_portal header {
-    opacity: 0;
+  body .follow_along {
+    padding-top: 5rem;
+  }
+  body .follow_along_portal header {
+    opacity: 0 !important;
+  }
+  body .article:hover header {
+    opacity: 1 !important;
   }
   body .who_is_limberlost {
     padding: 5rem 0;
@@ -7617,7 +7662,11 @@ footer.full-width .love-reverie {
   }
   .stay_in_touch #mc_subheader {
     font-size: 1rem;
+    line-height: 1.5rem;
     padding: 0 1rem;
+  }
+  .stay_in_touch .mc_input {
+    margin: 0;
   }
   .stay_in_touch .social_connect h2 {
     font-size: 2rem;
@@ -7625,6 +7674,10 @@ footer.full-width .love-reverie {
   }
   .stay_in_touch .social_connect li {
     margin: 0 .5rem;
+  }
+
+  .footer .sponsor_logos img {
+    padding: 1rem;
   }
 }
 @media only screen and (min-width: 64.063em) {
