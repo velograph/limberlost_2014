@@ -14,14 +14,24 @@
                 $target_post_id = $post->ID;
                 $src = wp_get_attachment_image_src( get_post_thumbnail_id($target_post_id), 'subpage-header', false, '' );
               ?>
-              <section id="parallax" data-speed="10" data-type="background" style="background: url(<?php echo $src[0]; ?> ) repeat 50% top fixed; background-size: cover;">
-
-                <div class="single_header">
+              <div id="featured_image" class="show-for-medium-down">
+                <?php the_post_thumbnail(); ?>
+                <div class="featured_image_title">
                   <em><?php the_date(); ?>/ Posted by <?php the_author_posts_link(); ?></em>
                   <h1 class="entry-title"><?php the_title(); ?></h1>
                 </div>
+              </div>
 
-              </section>
+              <div class="show-for-large-up">
+                <section id="parallax" data-speed="10" data-type="background" style="background: url(<?php echo $src[0]; ?> ) repeat 50% top fixed; background-size: cover;">
+
+                  <div class="single_header">
+                    <em><?php the_date(); ?>/ Posted by <?php the_author_posts_link(); ?></em>
+                    <h1 class="entry-title"><?php the_title(); ?></h1>
+                  </div>
+
+                </section>
+              </div>
 
           </div>
 

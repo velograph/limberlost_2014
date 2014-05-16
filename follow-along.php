@@ -39,8 +39,9 @@ $the_query = new WP_Query( $args );
           </div>
 
           <div class="small-12 medium-6 column">
-
-            <?php the_post_thumbnail(); ?>
+            <a href="<?php the_permalink(); ?>">
+              <?php the_post_thumbnail(); ?>
+            </a>
 
           </div>
 

@@ -459,7 +459,32 @@ footer.full-width {
   .footer {
     .sponsor_logos {
       img {
-        padding: 4rem;
+        padding: 0 4rem;
+      }
+    }
+  }
+  .join_us {
+    margin-top: 3rem;
+  }
+  .featured_image_container {
+    margin-bottom: 3rem;
+    #featured_image {
+      text-align: center;
+      position: relative;
+      .featured_image_title {
+        padding: 0 .985rem;
+        position: absolute;
+        top: 75px;
+        width: 100%;
+        h1, em {
+          color: $white;
+          a {
+            color: $white;
+          }
+          a:hover {
+            color: $persimmon;
+          }
+        }
       }
     }
   }
@@ -589,6 +614,9 @@ footer.full-width {
         padding: 1rem;
       }
     }
+  }
+  .join_us {
+    margin-top: 0;
   }
 }
 

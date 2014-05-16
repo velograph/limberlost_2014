@@ -22,15 +22,26 @@ get_header(); ?>
 
           <div class="featured_image_container">
 
-            <div class="row">
-              <header class="single_article_header">
-                <div class="small-12 small-centered column entry_meta">
-                  <h1 class="entry-title"><?php the_title(); ?></h1>
+              <?php
+                $target_post_id = $post->ID;
+                $src = wp_get_attachment_image_src( get_post_thumbnail_id($target_post_id), 'subpage-header', false, '' );
+              ?>
+              <div id="featured_image" class="show-for-medium-down">
+                <?php the_post_thumbnail(); ?>
+                <div class="featured_image_title">
+                <h1 class="entry-title"><?php the_title(); ?></h1>
                 </div>
-              </header>
-            </div>
+              </div>
 
-            <?php the_post_thumbnail(); ?>
+              <div class="show-for-large-up">
+                <section id="parallax" data-speed="10" data-type="background" style="background: url(<?php echo $src[0]; ?> ) repeat 50% top fixed; background-size: cover;">
+
+                  <div class="single_article_header single_header">
+                    <h1 class="entry-title"><?php the_title(); ?></h1>
+                  </div>
+
+                </section>
+              </div>
 
           </div>
 
@@ -82,7 +93,9 @@ get_header(); ?>
         $query->the_post();
 
   ?>
-    <div <?php post_class('small-12 medium-4 column employee_excerpt'); ?> >
+    <?php global $post;
+    $post_slug = $post->post_name; ?>
+    <div class="<?php echo $post_slug; ?> small-12 medium-4 column employee_excerpt" >
       <div class="entry_content">
         <?php the_post_thumbnail(); ?>
         <div class='post-content'>

@@ -1,6 +1,6 @@
 <div class="row">
 
-<div class="small-12 medium-8 columns mailing_small mailing_signup ">
+<div class="small-12 medium-8 columns mailing_small mailing_signup">
 
   <div id="mc_signup">
 

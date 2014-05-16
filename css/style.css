@@ -559,7 +559,10 @@ body #wpstats {
 }
 
 .article_archive .article_portal {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+.article_archive .article_portal h2 {
+  margin-bottom: 1rem;
 }
 .article_archive .article_portal a {
   color: #f08c69;
@@ -757,6 +760,9 @@ body.single-post .our_story_bios h1,
 .stay_in_touch_small #mc_signup_form #mc_subheader {
   font-size: 20px;
   margin-bottom: 1rem;
+}
+.stay_in_touch_small #mc_signup_form #mc_signup_submit {
+  margin-top: 0;
 }
 .stay_in_touch_small .mc_form_inside {
   text-align: left;
@@ -7571,7 +7577,34 @@ footer.full-width .love-reverie {
   }
 
   .footer .sponsor_logos img {
-    padding: 4rem;
+    padding: 0 4rem;
+  }
+
+  .join_us {
+    margin-top: 3rem;
+  }
+
+  .featured_image_container {
+    margin-bottom: 3rem;
+  }
+  .featured_image_container #featured_image {
+    text-align: center;
+    position: relative;
+  }
+  .featured_image_container #featured_image .featured_image_title {
+    padding: 0 .985rem;
+    position: absolute;
+    top: 75px;
+    width: 100%;
+  }
+  .featured_image_container #featured_image .featured_image_title h1, .featured_image_container #featured_image .featured_image_title em {
+    color: white;
+  }
+  .featured_image_container #featured_image .featured_image_title h1 a, .featured_image_container #featured_image .featured_image_title em a {
+    color: white;
+  }
+  .featured_image_container #featured_image .featured_image_title h1 a:hover, .featured_image_container #featured_image .featured_image_title em a:hover {
+    color: #f08c69;
   }
 }
 @media only screen and (min-width: 40.063em) {
@@ -7678,6 +7711,10 @@ footer.full-width .love-reverie {
 
   .footer .sponsor_logos img {
     padding: 1rem;
+  }
+
+  .join_us {
+    margin-top: 0;
   }
 }
 @media only screen and (min-width: 64.063em) {

@@ -80,7 +80,10 @@
 
 .article_archive {
   .article_portal {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    h2 {
+      margin-bottom: 1rem;
+    }
     a {
       color: $persimmon;
     }

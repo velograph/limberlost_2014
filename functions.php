@@ -119,4 +119,14 @@ function cc_mime_types( $mimes ){
       return $mimes;
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
+
+function my_login_logo() { ?>
+    <style type="text/css">
+        body.login div#login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/limberlost_monogram.svg);
+            padding-bottom: 30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
 ?>
