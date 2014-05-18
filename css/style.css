@@ -431,6 +431,9 @@ body p {
   font-family: 'bitterRegular', Times, serif;
   font-size: 18px;
 }
+body a {
+  color: #f08c69;
+}
 body figure.figure {
   display: block;
 }
@@ -538,6 +541,20 @@ body #wpstats {
   opacity: 1;
 }
 
+.our_story_home {
+  box-shadow: 0px 0px 5px 2px #3c4042;
+  position: relative;
+}
+.our_story_home .our_story_excerpt {
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  width: 100%;
+}
+.our_story_home .our_story_excerpt .intro-content p {
+  font-family: 'bitterItalic', Times, serif;
+}
+
 .who_is_limberlost .intro-content p {
   font-family: 'bitterItalic', Times, serif;
 }
@@ -629,6 +646,16 @@ body.single-post .container .main_container #content em,
 .page-template-our-story-php .container .main_container #content em {
   margin-bottom: 1rem;
 }
+body.single-post .container .wp-caption,
+.page-template-our-story-php .container .wp-caption {
+  max-width: 100%;
+}
+body.single-post .container .wp-caption .wp-caption-text,
+.page-template-our-story-php .container .wp-caption .wp-caption-text {
+  color: #999;
+  font-family: 'bitterItalic', Times, serif;
+  font-size: .75rem;
+}
 body.single-post .our_story_bios h1,
 .page-template-our-story-php .our_story_bios h1 {
   margin: 2rem 0 3rem;
@@ -683,6 +710,9 @@ body.single-post .our_story_bios h1,
 }
 .trip_teasers .trip {
   padding-bottom: 2rem;
+}
+.trip_teasers .trip .post-content img {
+  margin-bottom: 1rem;
 }
 .trip_teasers .oakridge-weekender {
   background: #d2f0f5;
@@ -7465,7 +7495,6 @@ footer.full-width .love-reverie {
 @media only screen {
   body h1 {
     font-size: 1.5rem;
-    letter-spacing: .25rem;
     line-height: 2.25rem;
     margin: 0;
   }
@@ -7526,14 +7555,18 @@ footer.full-width .love-reverie {
     position: absolute;
     top: 65px;
   }
-  body .container .container .main_container {
+  body .container .main_container {
     padding-top: 1rem;
   }
-  body .container .container .main_container #content {
+  body .container .main_container #content {
     padding-top: 1rem;
   }
-  body .container .container .follow_along_portal header {
+  body .container .follow_along_portal header {
     opacity: 1;
+  }
+  body .our_story_home .our_story_excerpt {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
   }
   body .who_is_limberlost {
     padding: 1rem 0;
@@ -7545,6 +7578,10 @@ footer.full-width .love-reverie {
   }
   body .who_is_limberlost .employee_excerpt {
     margin-bottom: 1rem;
+  }
+  body .who_is_limberlost .employee_excerpt a {
+    color: #3c4042;
+    text-decoration: underline;
   }
   body .post-categories li {
     font-size: .8rem;
@@ -7584,9 +7621,6 @@ footer.full-width .love-reverie {
     margin-top: 3rem;
   }
 
-  .featured_image_container {
-    margin-bottom: 3rem;
-  }
   .featured_image_container #featured_image {
     text-align: center;
     position: relative;
@@ -7596,6 +7630,9 @@ footer.full-width .love-reverie {
     position: absolute;
     top: 75px;
     width: 100%;
+  }
+  .featured_image_container #featured_image .featured_image_title em {
+    font-size: .9rem;
   }
   .featured_image_container #featured_image .featured_image_title h1, .featured_image_container #featured_image .featured_image_title em {
     color: white;
@@ -7666,10 +7703,13 @@ footer.full-width .love-reverie {
     padding-top: 5rem;
   }
   body .follow_along_portal header {
-    opacity: 0 !important;
+    opacity: 1 !important;
   }
   body .article:hover header {
     opacity: 1 !important;
+  }
+  body .our_story_home {
+    position: relative;
   }
   body .who_is_limberlost {
     padding: 5rem 0;
@@ -7716,16 +7756,27 @@ footer.full-width .love-reverie {
   .join_us {
     margin-top: 0;
   }
+
+  .featured_image_container #featured_image .featured_image_title {
+    padding: 0 .985rem;
+    top: 150px;
+    width: 100%;
+  }
+  .featured_image_container #featured_image .featured_image_title em {
+    font-size: .9rem;
+  }
 }
 @media only screen and (min-width: 64.063em) {
-  #sidebar {
-    padding-left: 1.875rem;
-    padding-right: 0;
-    margin-top: 0;
+  body .our_story_home {
+    position: relative;
   }
-
-  .footer-widget {
-    margin-top: 3rem;
-    padding-top: 2rem;
+  body .our_story_home .our_story_excerpt {
+    padding-top: 0;
+    position: absolute;
+    text-align: center;
+    top: 50px;
+  }
+  body .follow_along_portal header {
+    opacity: 0 !important;
   }
 }

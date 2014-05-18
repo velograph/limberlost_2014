@@ -129,7 +129,7 @@
               ?>
 
               <?php
-                $target_post_id = '5';
+                $target_post_id = '6';
                 $src = wp_get_attachment_image_src( get_post_thumbnail_id($target_post_id), 'subpage-header', false, '' );
               ?>
               <div id="static_home_banner" class="show-for-medium-down">
@@ -164,12 +164,12 @@
           </div>
             
 
-          <section class="who_is_limberlost">
+          <section class="our_story_home">
 
               <!-- Grab the Title and content from 'Who is Limberlost' -->
               <?php
 
-                $args = array('page_id' => 15);
+                $args = array('pagename' => 'our-story');
                 $query = new WP_Query($args);
 
                 if($query->have_posts()) : 
@@ -178,13 +178,21 @@
 
               ?>
 
-              <div class="row">
+              <div class="show-for-large-up">
+                <?php the_post_thumbnail(); ?>
+              </div>
 
-                <div class="small-12 small-centered column">
+              <div class="our_story_excerpt">
 
-                  <h1><?php the_title() ?></h1>
+                <div class="row">
 
-                  <div class='intro-content'><?php the_content() ?></div>      
+                  <div class="small-12 medium-8 small-centered column">
+
+                    <h1><?php the_field('excerpt_title'); ?></h1>
+
+                    <div class='intro-content'><?php the_excerpt() ?></div>      
+
+                  </div>
 
                 </div>
 

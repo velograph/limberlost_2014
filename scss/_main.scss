@@ -48,6 +48,22 @@
   }
 }
 
+.our_story_home {
+  box-shadow: 0px 0px 5px 2px $poppy;
+  position: relative;
+  .our_story_excerpt {
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    width: 100%;
+    .intro-content {
+      p {
+        font-family: 'bitterItalic', Times, serif;
+      }
+    }
+  }
+}
+
 .who_is_limberlost {
   .intro-content {
     p {
@@ -146,6 +162,14 @@ body.single-post,
         }
       }
     }
+    .wp-caption {
+      max-width: 100%;
+      .wp-caption-text {
+        color: #999;
+        font-family: 'bitterItalic', Times, serif;
+        font-size: .75rem;
+      }
+    }
   }
   .our_story_bios {
     h1 {
@@ -204,6 +228,11 @@ body.single-post,
   margin-bottom: 3rem;
   .trip {
     padding-bottom: 2rem;
+    .post-content {
+      img {
+        margin-bottom: 1rem;
+      }
+    }
   }
   .oakridge-weekender {
     background: $baby_blue;

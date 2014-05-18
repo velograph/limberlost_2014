@@ -39,7 +39,7 @@
 <div class="social_connect">
 
   <div class="row">
-    <h2 class="small-12 small-centered columns">OR FIND US ELSEWHERE ON THE WEB:</h2>
+    <h2 class="small-12 small-centered columns">OR FIND US ELSEWHERE:</h2>
   </div>
 
   <div class="row">

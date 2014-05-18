@@ -1,8 +1,6 @@
 
               </div><!-- Row End -->
 
-      </div><!-- Container End -->
-
       <?php if( is_front_page() ) : ?>
 
       <div class="who_is_limberlost">
@@ -170,6 +168,8 @@ Hold off on this for a bit
       </footer>
 
     </section><!-- closes out the off-canvas-menu -->
+
+  </div><!-- Container End -->
 
   </div><!-- .inner-wrap -->
 
