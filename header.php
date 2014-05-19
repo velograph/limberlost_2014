@@ -188,7 +188,7 @@
 
                   <div class="small-12 medium-8 small-centered column">
 
-                    <h1><?php the_field('excerpt_title'); ?></h1>
+                    <h1><a href="/our-story"><?php the_field('excerpt_title'); ?></a></h1>
 
                     <div class='intro-content'><?php the_excerpt() ?></div>      
 
@@ -222,7 +222,7 @@
 
               <div class="small-12 small-centered column">
 
-                <h1>FOLLOW ALONG</h1>
+                <h1><a href="/follow-along">FOLLOW ALONG</a></h1>
                 <h3>Recent stories, trip reports, gear reviews, recipes and more from the road less traveled.</h3>
 
               </div>

@@ -53,10 +53,11 @@
 
                 <hr />
 
-                <?php reverie_entry_meta(); ?> | <?php the_category(); ?>
+                <?php reverie_entry_meta(); ?>
+                <br />
+                <?php the_category(); ?>
 
                 <?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'reverie'), 'after' => '</p></nav>' )); ?>
-                <p class="entry-tags"><?php the_tags(); ?></p>
                 <?php edit_post_link('Edit this Post'); ?>
 
               </footer>

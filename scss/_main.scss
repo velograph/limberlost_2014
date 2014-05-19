@@ -6,6 +6,18 @@
       padding-top: 2rem;
     }
   }
+  .who_is_limberlost,
+  .follow_along,
+  .our_story_home {
+    h1 {
+      a {
+        color: $poppy;
+      }
+      a:hover {
+        color: $persimmon
+      }
+    }
+  }
 }
 
 .container {
@@ -32,7 +44,6 @@
       margin: 0;
       padding: 0;
       position: absolute;
-      transition: all .2s linear;
       h5 {
         color: $white;
         margin: 0;
@@ -49,7 +60,6 @@
 }
 
 .our_story_home {
-  box-shadow: 0px 0px 5px 2px $poppy;
   position: relative;
   .our_story_excerpt {
     position: absolute;
@@ -60,6 +70,14 @@
       p {
         font-family: 'bitterItalic', Times, serif;
       }
+    }
+  }
+}
+
+.our_story {
+  .featured_image_container {
+    h1.entry-title {
+      color: $poppy !important;
     }
   }
 }
@@ -134,17 +152,20 @@ body.single-post,
 .page-template-our-story-php {
   .featured_image_container {
     position: relative;
-    .single_article_header {
+    .featured_image_title {
       position: absolute;
       text-align: center;
+    }
+    .featured_image_title,
+    .single_header {
       h1, em {
-        color: $white;
         text-shadow: 0px 2px 2px $poppy;
       }
     }
   }
   .post-categories {
-    display: inline;
+    display: inline-block;
+    margin-top: 1rem;
   }
   .container {
     .main_container {
@@ -153,9 +174,6 @@ body.single-post,
       #content {
         .entry_meta {
           text-align: center;
-        }
-        h1, em {
-          color: $white;
         }
         em {
           margin-bottom: 1rem;
@@ -229,6 +247,10 @@ body.single-post,
   .trip {
     padding-bottom: 2rem;
     .post-content {
+      a {
+        color: $poppy;
+        text-decoration: underline;
+      }
       img {
         margin-bottom: 1rem;
       }

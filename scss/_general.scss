@@ -21,14 +21,18 @@ body {
     color: $poppy;
     font-family: 'bitterItalic', Times, serif;
     font-size: 18px;
+    font-style: normal;
   }
 
   p {
     font-family: 'bitterRegular', Times, serif;
-    font-size: 18px;
   }
 
   a {
+    color: $persimmon;
+  }
+
+  a:hover {
     color: $persimmon;
   }
 

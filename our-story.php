@@ -51,7 +51,10 @@ get_header(); ?>
 
     <div id="content" class="small-12 medium-10 small-centered column">
 
-      <div class='intro-content'><?php the_content() ?></div>      
+      <div class='intro-content'>
+        <h1><?php the_field('excerpt_title'); ?></h1>
+        <?php the_content() ?>
+       </div>
 
     </div>
 
@@ -82,9 +85,6 @@ get_header(); ?>
 
     if($query->have_posts()) : 
   ?>
-  <div class="row">
-  <h1 class="small-12 columns">Who is Limberlost?</h1>
-  </div>
 
   <div class="row our_story_bios">
 

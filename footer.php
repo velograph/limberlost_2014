@@ -15,7 +15,7 @@
           ?>
           <div class="row">
 
-          <h1 class="small-12 medium-11 columns">We've Got This</h1>
+          <h1 class="small-12 medium-11 columns"><a href="/our-story">We've Got This</a></h1>
           <?php
               while($query->have_posts()) : 
                 $query->the_post();
@@ -29,7 +29,7 @@
                 <div class='post-content'>
                   <h2><?php the_title() ?></h2>
                   <em><?php the_field('employee_title'); ?></em>
-                  <?php the_excerpt() ?>
+                  <p><a href="/our-story">Read More &rarr;</a></p>
                 </div>
               </div>
             </div>

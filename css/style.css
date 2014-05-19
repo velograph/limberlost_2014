@@ -426,12 +426,15 @@ body em {
   color: #3c4042;
   font-family: 'bitterItalic', Times, serif;
   font-size: 18px;
+  font-style: normal;
 }
 body p {
   font-family: 'bitterRegular', Times, serif;
-  font-size: 18px;
 }
 body a {
+  color: #f08c69;
+}
+body a:hover {
   color: #f08c69;
 }
 body figure.figure {
@@ -506,6 +509,16 @@ body #wpstats {
 .home .main_container.follow_along h2 {
   padding-top: 2rem;
 }
+.home .who_is_limberlost h1 a,
+.home .follow_along h1 a,
+.home .our_story_home h1 a {
+  color: #3c4042;
+}
+.home .who_is_limberlost h1 a:hover,
+.home .follow_along h1 a:hover,
+.home .our_story_home h1 a:hover {
+  color: #f08c69;
+}
 
 .container .home_featured_image img {
   display: block;
@@ -527,7 +540,6 @@ body #wpstats {
   margin: 0;
   padding: 0;
   position: absolute;
-  transition: all .2s linear;
 }
 .follow_along .article header h5 {
   color: white;
@@ -542,7 +554,6 @@ body #wpstats {
 }
 
 .our_story_home {
-  box-shadow: 0px 0px 5px 2px #3c4042;
   position: relative;
 }
 .our_story_home .our_story_excerpt {
@@ -553,6 +564,10 @@ body #wpstats {
 }
 .our_story_home .our_story_excerpt .intro-content p {
   font-family: 'bitterItalic', Times, serif;
+}
+
+.our_story .featured_image_container h1.entry-title {
+  color: #3c4042 !important;
 }
 
 .who_is_limberlost .intro-content p {
@@ -613,20 +628,24 @@ body.single-post .featured_image_container,
 .page-template-our-story-php .featured_image_container {
   position: relative;
 }
-body.single-post .featured_image_container .single_article_header,
-.page-template-our-story-php .featured_image_container .single_article_header {
+body.single-post .featured_image_container .featured_image_title,
+.page-template-our-story-php .featured_image_container .featured_image_title {
   position: absolute;
   text-align: center;
 }
-body.single-post .featured_image_container .single_article_header h1, body.single-post .featured_image_container .single_article_header em,
-.page-template-our-story-php .featured_image_container .single_article_header h1,
-.page-template-our-story-php .featured_image_container .single_article_header em {
-  color: white;
+body.single-post .featured_image_container .featured_image_title h1, body.single-post .featured_image_container .featured_image_title em,
+body.single-post .featured_image_container .single_header h1,
+body.single-post .featured_image_container .single_header em,
+.page-template-our-story-php .featured_image_container .featured_image_title h1,
+.page-template-our-story-php .featured_image_container .featured_image_title em,
+.page-template-our-story-php .featured_image_container .single_header h1,
+.page-template-our-story-php .featured_image_container .single_header em {
   text-shadow: 0px 2px 2px #3c4042;
 }
 body.single-post .post-categories,
 .page-template-our-story-php .post-categories {
-  display: inline;
+  display: inline-block;
+  margin-top: 1rem;
 }
 body.single-post .container .main_container,
 .page-template-our-story-php .container .main_container {
@@ -636,11 +655,6 @@ body.single-post .container .main_container,
 body.single-post .container .main_container #content .entry_meta,
 .page-template-our-story-php .container .main_container #content .entry_meta {
   text-align: center;
-}
-body.single-post .container .main_container #content h1, body.single-post .container .main_container #content em,
-.page-template-our-story-php .container .main_container #content h1,
-.page-template-our-story-php .container .main_container #content em {
-  color: white;
 }
 body.single-post .container .main_container #content em,
 .page-template-our-story-php .container .main_container #content em {
@@ -711,6 +725,10 @@ body.single-post .our_story_bios h1,
 .trip_teasers .trip {
   padding-bottom: 2rem;
 }
+.trip_teasers .trip .post-content a {
+  color: #3c4042;
+  text-decoration: underline;
+}
 .trip_teasers .trip .post-content img {
   margin-bottom: 1rem;
 }
@@ -764,9 +782,6 @@ body.single-post .our_story_bios h1,
   display: inline-block;
   margin: 0 1rem;
 }
-.stay_in_touch .social_connect img {
-  width: 50px;
-}
 
 .mc_custom_border_hdr {
   color: white;
@@ -781,7 +796,7 @@ body.single-post .our_story_bios h1,
 }
 
 .mailing_small #mc_signup em {
-  padding-left: 0.9375rem;
+  text-align: center;
 }
 
 .stay_in_touch_small {
@@ -7508,6 +7523,14 @@ footer.full-width .love-reverie {
     line-height: 1.5rem;
     margin: 0;
   }
+  body h5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin: 0;
+  }
+  body p {
+    font-size: 16px;
+  }
   body .single_article_header {
     top: 50px;
   }
@@ -7533,7 +7556,7 @@ footer.full-width .love-reverie {
     position: absolute;
   }
   body .container {
-    top: 65px;
+    margin-top: 0;
   }
   body .container #static_home_banner {
     position: relative;
@@ -7561,23 +7584,39 @@ footer.full-width .love-reverie {
   body .container .main_container #content {
     padding-top: 1rem;
   }
+  body .container .follow_along {
+    padding-top: 5rem;
+  }
   body .container .follow_along_portal header {
     opacity: 1;
+  }
+  body .our_story_home {
+    box-shadow: none;
   }
   body .our_story_home .our_story_excerpt {
     padding-bottom: 3rem;
     padding-top: 3rem;
+    position: relative;
+    top: 0;
+  }
+  body .our_story h2 {
+    margin: 2rem 0;
+  }
+  body .our_story h3 {
+    font-size: 1.5rem;
+    padding: 2rem 0;
   }
   body .who_is_limberlost {
     padding: 1rem 0;
   }
-  body .who_is_limberlost .intro-content p {
-    font-family: 'bitterItalic', Times, serif;
-    padding-bottom: 1rem;
-    padding-left: .5rem;
-  }
   body .who_is_limberlost .employee_excerpt {
     margin-bottom: 1rem;
+  }
+  body .who_is_limberlost .employee_excerpt h2 {
+    margin-bottom: 1rem;
+  }
+  body .who_is_limberlost .employee_excerpt em {
+    font-size: 16px;
   }
   body .who_is_limberlost .employee_excerpt a {
     color: #3c4042;
@@ -7599,11 +7638,8 @@ footer.full-width .love-reverie {
   .stay_in_touch #mc_signup_submit {
     margin: 1.5rem 0;
   }
-  .stay_in_touch .mc_input {
-    margin: 0;
-  }
-  .stay_in_touch .mc_form_inside {
-    width: 90%;
+  .stay_in_touch .mc_form_inside .mc_input {
+    margin-bottom: 1rem;
   }
   .stay_in_touch .social_connect h2 {
     font-size: 1rem;
@@ -7612,6 +7648,9 @@ footer.full-width .love-reverie {
   .stay_in_touch .social_connect li {
     margin: 0 .5rem;
   }
+  .stay_in_touch .social_connect li img {
+    width: 50px;
+  }
 
   .footer .sponsor_logos img {
     padding: 0 4rem;
@@ -7619,6 +7658,14 @@ footer.full-width .love-reverie {
 
   .join_us {
     margin-top: 3rem;
+  }
+
+  .our_story #content {
+    margin-top: 3rem;
+    padding-top: 0;
+  }
+  .our_story #content h1 {
+    color: #3c4042;
   }
 
   .featured_image_container #featured_image {
@@ -7648,7 +7695,7 @@ footer.full-width .love-reverie {
   body h1 {
     font-size: 3.5rem;
     line-height: 4rem;
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
   }
   body h2 {
     font-size: 2rem;
@@ -7748,6 +7795,9 @@ footer.full-width .love-reverie {
   .stay_in_touch .social_connect li {
     margin: 0 .5rem;
   }
+  .stay_in_touch .social_connect li img {
+    width: 35px;
+  }
 
   .footer .sponsor_logos img {
     padding: 1rem;
@@ -7767,7 +7817,14 @@ footer.full-width .love-reverie {
   }
 }
 @media only screen and (min-width: 64.063em) {
+  body .container {
+    margin-top: 115px;
+  }
+  body p {
+    font-size: 18px;
+  }
   body .our_story_home {
+    box-shadow: 0px 0px 5px 2px #3c4042;
     position: relative;
   }
   body .our_story_home .our_story_excerpt {

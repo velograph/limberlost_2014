@@ -8,7 +8,7 @@ get_header(); ?>
 
   <div class="row">
     <div class="small-12 columns">
-      <h1>Follow Along on some of our most recent Adventures</h1>
+      <h1>Follow Along</h1>
     </div>
   </div>
 
